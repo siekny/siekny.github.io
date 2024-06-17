@@ -125,11 +125,11 @@
   box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+a { text-decoration: none; display: contents; color: cornflowerblue;}
 
-li { list-style: none; }
+/* li { list-style: none; } */
 
-img, ion-icon, a, button, time, span { display: block; }
+/* img, ion-icon, a, button, time, span { display: block; } */
 
 button {
   font: inherit;
@@ -399,7 +399,7 @@ main {
 
 .contacts-list {
   display: grid;
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr; */
   gap: 16px;
 }
 
@@ -518,7 +518,7 @@ main {
 
 .service-list {
   display: grid;
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr; */
   gap: 20px;
 }
 
@@ -934,7 +934,7 @@ main {
 
 .project-list {
   display: grid;
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr; */
   gap: 30px;
   margin-bottom: 10px;
 }
@@ -1038,7 +1038,7 @@ main {
 
 .blog-posts-list {
   display: grid;
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr; */
   gap: 20px;
 }
 
@@ -1147,7 +1147,7 @@ main {
 
 .input-wrapper {
   display: grid;
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr; */
   gap: 25px;
   margin-bottom: 25px;
 }
@@ -1566,7 +1566,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .contacts-list {
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     gap: 30px 15px;
   }
 
@@ -1624,7 +1624,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* portfolio and blog grid */
 
-  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+  /* .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; } */
 
 
 
@@ -1632,7 +1632,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * CONTACT
    */
 
-  .input-wrapper { grid-template-columns: 1fr 1fr; }
+  /* .input-wrapper { grid-template-columns: 1fr 1fr; } */
 
   .form-btn {
     width: max-content;
@@ -1726,7 +1726,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* service */
 
   .service-list {
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     gap: 20px 25px;
   }
 
@@ -1744,7 +1744,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * PORTFOLIO
    */
 
-  .project-list { grid-template-columns: repeat(3, 1fr); }
+  /* .project-list { grid-template-columns: repeat(3, 1fr); } */
 
 
 
@@ -1851,7 +1851,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     visibility: visible;
   }
 
-  .contacts-list { grid-template-columns: 1fr; }
+  /* .contacts-list { grid-template-columns: 1fr; } */
 
   .contact-info :is(.contact-link) {
     white-space: nowrap;
