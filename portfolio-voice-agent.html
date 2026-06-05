@@ -83,9 +83,8 @@
       </div>
 
       <div class="title-wrapper">
-        <h1>3D Pose Estimation</h1>
-        <p>A lightweight graph-based network optimized for both accuracy and efficiency in 3D single-hand pose
-          estimation.</p>
+        <h1>AI Voice Agent</h1>
+        <p>Developing an AI voice assistant for a Poomsae training kiosk .</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -95,55 +94,56 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row gy-4 g-lg-5">
-          <div class="col-lg-6">
-            <img src="assets/img/portfolio/portfolio-2.png" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/3dhand_1.png" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/3dhand_2.png" class="img-fluid mb-4" alt="">
+          <div class="col-lg-4">
+            <!-- <img src="assets/img/portfolio/voice-agent.png" class="img-fluid mb-4" alt="" width="80%"> -->
+            <img src="assets/img/portfolio/portfolio-voice-agent.svg" class="img-fluid mb-4" alt="">
+            <!-- <h5>Axial</h5>
+            <img src="assets/img/portfolio/xr2ct_axial.png" class="img-fluid mb-4" alt="">
+            <h5>Coronal</h5>
+            <img src="assets/img/portfolio/xr2ct_coronal.png" class="img-fluid mb-4" alt="">
+            <h5>Sagittal</h5>
+            <img src="assets/img/portfolio/xr2ct_sagittal.png" class="img-fluid mb-4" alt=""> -->
 
             <!-- <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid mb-4" alt="">
             <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid mb-4" alt="">
             <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid mb-4" alt=""> -->
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-8">
 
             <div class="position-sticky" style="top: 40px">
               <div class="portfolio-description">
-                <h2>Summary</h2>
-                <p>
-                  Hand pose estimation has gained significant interest recently, leading to the development of various
-                  methods. While existing approaches aim to improve performance, they often encounter efficiency
-                  challenges which make it hard to run in real-time. In this study, we propose a lightweight graph-based
-                  network optimized for both accuracy and efficiency in 3D single-hand pose estimation. Our design
-                  leverages Chebyshev Graph Convolutions (ChebGConv) to streamline the 2D encoding process, reducing
-                  computational overhead. Subsequently, we introduce a coarse-to-fine ChebGConv module within the 3D
-                  decoder to progressively optimize hand mesh reconstruction, improving both accuracy and inference
-                  speed. Furthermore, we refine our model through the ensemble distillation, transferring knowledge from
-                  high-performing teacher models to our model. Notably efficient, our model has only 8.48M parameters
-                  and requires 1.7 GFLOPS, achieving 55 FPS on a CPU and 109 FPS on a GPU. Despite its lightweight
-                  nature, our model demonstrates competitive accuracy, achieving a better performance compared to
-                  existing methods.
-                </p>
                 <h2>Introduction</h2>
                 <p>
-                  Single-hand pose estimation has seen substantial success across various fields, including industrial
-                  applications, primarily due to advancements in deep network architectures. Recent mesh reconstruction
-                  algorithms [8, 10, 31, 41, 49, 54] are typically trained end-to-end from the input image to the output
-                  mesh. While these methods have enhanced performance, they often demand greater computational resources
-                  and increased complexity.
-                  
-                  Previous works [8, 53] have demonstrated that CNN-based structure
-                  information is critical for learning feature representations for 3D hand pose estimation. However, the
-                  CNN-based method is weak in precisely modeling the kinematic structure information. To better model
-                  the kinematic structure information, several studies [41, 49, 54, 71] employ attention mechanism in the transformer to capture
-                  the global visual information over the entire feature representation. This allows interactions among
-                  all nodes, thereby modeling their relations. However, the self-attention builds upon calculating
-                  similarities of nodes and ignores the graph structure information, such as the adjacency relations
-                  among nodes ...
+                  Developed an embedded AI voice assistant for a poomsae training kiosk that allows users to navigate
+                  the application, control practice sessions, and ask coaching questions entirely by voice — running
+                  on a Windows kiosk with internet dependency.
                 </p>
-                <p>Read our paper. (Coming soon)</p>
-                <!-- <embed src="assets/pdf/19D-P-4.pdf" width="800px" height="2100px" /> -->
-                
+                <ul>
+                  <li>
+                    Designed a 5-stage voice pipeline (IDLE → WAKEWORD → LISTENING → THINKING → SPEAKING) as a
+                    background daemon thread, exposing a single event callback to the UI layer
+                  </li>
+                  <li>
+                    every component (STT, LLM, TTS) has a local and cloud implementation behind a unified interface
+                  </li>
+                  <li>Integrated the agent into a PySide6/QML application - no cloud wake word service needed</li>
+                </ul>
+                <h2>Wake Word & Speech</h2>
+                <ul>
+                  <li>Built a custom on-device wake word detector</li>
+                  <li>Implemented barge-in interruption</li>
+                </ul>
+
+                <h2>LLM & RAG</h2>
+                <ul>
+                  <li>Designed a task classifier that routes user speech into intents before dispatching to the
+                    appropriate agent</li>
+                  <li>Built a RAG coaching QA system</li>
+                  <li>Built a RecommendationEngine that queries the user's local DB training history on login and uses the
+                    LLM to generate a personalized next-step greeting.</li>
+                </ul>
+
               </div>
 
             </div>
