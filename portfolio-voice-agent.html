@@ -28,6 +28,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: EasyFolio
@@ -50,12 +51,11 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index" class="active">Home</a></li>
-          <li><a href="index">About</a></li>
-          <li><a href="index">Resume</a></li>
-          <li><a href="index">Portfolio</a></li>
-
-          <li><a href="index">Contact</a></li>
+          <li><a href="index" class="active" data-i18n="nav_home">Home</a></li>
+          <li><a href="index" data-i18n="nav_about">About</a></li>
+          <li><a href="index" data-i18n="nav_resume">Resume</a></li>
+          <li><a href="index" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="index" data-i18n="nav_contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -63,6 +63,12 @@
       <div class="header-social-links">
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.linkedin.com/in/siekny-hor-862898151/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <div class="lang-switcher d-flex align-items-center">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="ko">KO</button>
       </div>
 
     </div>
@@ -75,16 +81,16 @@
       <div class="breadcrumbs">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
-            <li class="breadcrumb-item active current">Portfolio Details</li>
+            <li class="breadcrumb-item"><a href="index"><i class="bi bi-house"></i> <span data-i18n="breadcrumb_home">Home</span></a></li>
+            <li class="breadcrumb-item"><a href="#" data-i18n="breadcrumb_category">Category</a></li>
+            <li class="breadcrumb-item active current" data-i18n="breadcrumb_current">Portfolio Details</li>
           </ol>
         </nav>
       </div>
 
       <div class="title-wrapper">
-        <h1>AI Voice Agent</h1>
-        <p>Developing an AI voice assistant for a Poomsae training kiosk .</p>
+        <h1 data-i18n="va_title">AI Voice Agent</h1>
+        <p data-i18n="va_subtitle">Developing an AI voice assistant for a Poomsae training kiosk.</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -113,35 +119,23 @@
 
             <div class="position-sticky" style="top: 40px">
               <div class="portfolio-description">
-                <h2>Introduction</h2>
-                <p>
-                  Developed an embedded AI voice assistant for a poomsae training kiosk that allows users to navigate
-                  the application, control practice sessions, and ask coaching questions entirely by voice — running
-                  on a Windows kiosk with internet dependency.
-                </p>
+                <h2 data-i18n="va_intro_heading">Introduction</h2>
+                <p data-i18n="va_intro">Developed an embedded AI voice assistant for a poomsae training kiosk that allows users to navigate the application, control practice sessions, and ask coaching questions entirely by voice — running on a Windows kiosk with internet dependency.</p>
                 <ul>
-                  <li>
-                    Designed a 5-stage voice pipeline (IDLE → WAKEWORD → LISTENING → THINKING → SPEAKING) as a
-                    background daemon thread, exposing a single event callback to the UI layer
-                  </li>
-                  <li>
-                    every component (STT, LLM, TTS) has a local and cloud implementation behind a unified interface
-                  </li>
-                  <li>Integrated the agent into a PySide6/QML application - no cloud wake word service needed</li>
+                  <li data-i18n="va_li1">Designed a 5-stage voice pipeline (IDLE → WAKEWORD → LISTENING → THINKING → SPEAKING) as a background daemon thread, exposing a single event callback to the UI layer</li>
+                  <li data-i18n="va_li2">Every component (STT, LLM, TTS) has a local and cloud implementation behind a unified interface</li>
+                  <li data-i18n="va_li3">Integrated the agent into a PySide6/QML application - no cloud wake word service needed</li>
                 </ul>
-                <h2>Wake Word & Speech</h2>
+                <h2 data-i18n="va_wakeword_heading">Wake Word & Speech</h2>
                 <ul>
-                  <li>Built a custom on-device wake word detector</li>
-                  <li>Implemented barge-in interruption</li>
+                  <li data-i18n="va_li4">Built a custom on-device wake word detector</li>
+                  <li data-i18n="va_li5">Implemented barge-in interruption</li>
                 </ul>
-
-                <h2>LLM & RAG</h2>
+                <h2 data-i18n="va_llm_heading">LLM & RAG</h2>
                 <ul>
-                  <li>Designed a task classifier that routes user speech into intents before dispatching to the
-                    appropriate agent</li>
-                  <li>Built a RAG coaching QA system</li>
-                  <li>Built a RecommendationEngine that queries the user's local DB training history on login and uses the
-                    LLM to generate a personalized next-step greeting.</li>
+                  <li data-i18n="va_li6">Designed a task classifier that routes user speech into intents before dispatching to the appropriate agent</li>
+                  <li data-i18n="va_li7">Built a RAG coaching QA system</li>
+                  <li data-i18n="va_li8">Built a RecommendationEngine that queries the user's local DB training history on login and uses the LLM to generate a personalized next-step greeting.</li>
                 </ul>
 
               </div>
@@ -195,6 +189,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
 
 </body>
 

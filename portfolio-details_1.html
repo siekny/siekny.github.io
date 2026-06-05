@@ -28,6 +28,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: EasyFolio
@@ -50,12 +51,11 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index" class="active">Home</a></li>
-          <li><a href="index">About</a></li>
-          <li><a href="index">Resume</a></li>
-          <li><a href="index">Portfolio</a></li>
-          
-          <li><a href="index">Contact</a></li>
+          <li><a href="index" class="active" data-i18n="nav_home">Home</a></li>
+          <li><a href="index" data-i18n="nav_about">About</a></li>
+          <li><a href="index" data-i18n="nav_resume">Resume</a></li>
+          <li><a href="index" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="index" data-i18n="nav_contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -63,6 +63,12 @@
       <div class="header-social-links">
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.linkedin.com/in/siekny-hor-862898151/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <div class="lang-switcher d-flex align-items-center">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="ko">KO</button>
       </div>
 
     </div>
@@ -75,16 +81,16 @@
       <div class="breadcrumbs">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
-            <li class="breadcrumb-item active current">Portfolio Details</li>
+            <li class="breadcrumb-item"><a href="index"><i class="bi bi-house"></i> <span data-i18n="breadcrumb_home">Home</span></a></li>
+            <li class="breadcrumb-item"><a href="#" data-i18n="breadcrumb_category">Category</a></li>
+            <li class="breadcrumb-item active current" data-i18n="breadcrumb_current">Portfolio Details</li>
           </ol>
         </nav>
       </div>
 
       <div class="title-wrapper">
-        <h1>CT Reconstruction from X-Ray Images</h1>
-        <p>Developing a deep learning model to reconstruct CT scan from X-ray images.</p>
+        <h1 data-i18n="ct_title">CT Reconstruction from X-Ray Images</h1>
+        <p data-i18n="ct_subtitle">Developing a deep learning model to reconstruct CT scan from X-ray images.</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -112,16 +118,9 @@
 
             <div class="position-sticky" style="top: 40px">
               <div class="portfolio-description">
-                <h2>Summary</h2>
-                <p>
-                  CT scans are more essential for accurate disease diagnosis, offering detailed 3D information. However,
-                  they are significantly more expensive than X-ray machines, making them less accessible in clinical
-                  settings. In this work, we propose a method called XR2CT to reconstruct CT images from a single
-                  X-ray using a GAN-based approach. Our method includes a 2D mapping network and a 3D encoder-decoder.
-                  Through qualitative and quantitative evaluations, our model demonstrates improved structural accuracy
-                  compared to existing methods.
-                </p>
-                <h2>Introduction</h2>
+                <h2 data-i18n="ct_summary_heading">Summary</h2>
+                <p data-i18n="ct_summary">CT scans are more essential for accurate disease diagnosis, offering detailed 3D information. However, they are significantly more expensive than X-ray machines, making them less accessible in clinical settings. In this work, we propose a method called XR2CT to reconstruct CT images from a single X-ray using a GAN-based approach. Our method includes a 2D mapping network and a 3D encoder-decoder. Through qualitative and quantitative evaluations, our model demonstrates improved structural accuracy compared to existing methods.</p>
+                <h2 data-i18n="ct_intro_heading">Introduction</h2>
                 <p>
                   X-ray and CT imaging are commonly used in hospitals. CT scans offer a significant advantage by
                   presenting tissues in 3D, effectively resolving the tissue of overlapping structures seen in 2D
@@ -139,7 +138,7 @@
                   initial template CT to guide the 3D network. The generated 3D CT volumes are then passed into the
                   discriminator for improved fidelity.
                 </p>
-                <p>Read our paper. (Note that we use only a single X-ray as input).</p>
+                <p data-i18n="ct_read_paper">Read our paper. (Note that we use only a single X-ray as input).</p>
                 <embed src="assets/pdf/19D-P-4.pdf" width="800px" height="2100px" />
                 <!-- <div class="testimonial-item">
                   <p>
@@ -230,6 +229,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
 
 </body>
 

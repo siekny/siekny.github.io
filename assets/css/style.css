@@ -11,6 +11,46 @@
     /* background: #F1F1F1; */
 /* } */
 
+/* LANGUAGE SWITCHER
+=============== */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 3px 7px;
+  font-size: 13px;
+  font-family: var(--nav-font);
+  color: var(--nav-color);
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 400;
+  transition: color 0.2s;
+  line-height: 1;
+}
+
+.lang-btn.active {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.lang-btn:hover {
+  color: var(--nav-hover-color);
+}
+
+.lang-divider {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  pointer-events: none;
+}
+
 /* CHATBOX
 =============== */
 .chatbox {

@@ -28,6 +28,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: EasyFolio
@@ -50,12 +51,11 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index" class="active">Home</a></li>
-          <li><a href="index">About</a></li>
-          <li><a href="index">Resume</a></li>
-          <li><a href="index">Portfolio</a></li>
-
-          <li><a href="index">Contact</a></li>
+          <li><a href="index" class="active" data-i18n="nav_home">Home</a></li>
+          <li><a href="index" data-i18n="nav_about">About</a></li>
+          <li><a href="index" data-i18n="nav_resume">Resume</a></li>
+          <li><a href="index" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="index" data-i18n="nav_contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -63,6 +63,12 @@
       <div class="header-social-links">
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.linkedin.com/in/siekny-hor-862898151/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <div class="lang-switcher d-flex align-items-center">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="ko">KO</button>
       </div>
 
     </div>
@@ -75,17 +81,16 @@
       <div class="breadcrumbs">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
-            <li class="breadcrumb-item active current">Portfolio Details</li>
+            <li class="breadcrumb-item"><a href="index"><i class="bi bi-house"></i> <span data-i18n="breadcrumb_home">Home</span></a></li>
+            <li class="breadcrumb-item"><a href="#" data-i18n="breadcrumb_category">Category</a></li>
+            <li class="breadcrumb-item active current" data-i18n="breadcrumb_current">Portfolio Details</li>
           </ol>
         </nav>
       </div>
 
       <div class="title-wrapper">
-        <h1>3D Pose Estimation</h1>
-        <p>A lightweight graph-based network optimized for both accuracy and efficiency in 3D single-hand pose
-          estimation.</p>
+        <h1 data-i18n="pose_title">3D Pose Estimation</h1>
+        <p data-i18n="pose_subtitle">A lightweight graph-based network optimized for both accuracy and efficiency in 3D single-hand pose estimation.</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -109,22 +114,9 @@
 
             <div class="position-sticky" style="top: 40px">
               <div class="portfolio-description">
-                <h2>Summary</h2>
-                <p>
-                  Hand pose estimation has gained significant interest recently, leading to the development of various
-                  methods. While existing approaches aim to improve performance, they often encounter efficiency
-                  challenges which make it hard to run in real-time. In this study, we propose a lightweight graph-based
-                  network optimized for both accuracy and efficiency in 3D single-hand pose estimation. Our design
-                  leverages Chebyshev Graph Convolutions (ChebGConv) to streamline the 2D encoding process, reducing
-                  computational overhead. Subsequently, we introduce a coarse-to-fine ChebGConv module within the 3D
-                  decoder to progressively optimize hand mesh reconstruction, improving both accuracy and inference
-                  speed. Furthermore, we refine our model through the ensemble distillation, transferring knowledge from
-                  high-performing teacher models to our model. Notably efficient, our model has only 8.48M parameters
-                  and requires 1.7 GFLOPS, achieving 55 FPS on a CPU and 109 FPS on a GPU. Despite its lightweight
-                  nature, our model demonstrates competitive accuracy, achieving a better performance compared to
-                  existing methods.
-                </p>
-                <h2>Introduction</h2>
+                <h2 data-i18n="pose_summary_heading">Summary</h2>
+                <p data-i18n="pose_summary">Hand pose estimation has gained significant interest recently, leading to the development of various methods. While existing approaches aim to improve performance, they often encounter efficiency challenges which make it hard to run in real-time. We propose a lightweight graph-based network using Chebyshev Graph Convolutions (ChebGConv). Our model has only 8.48M parameters and requires 1.7 GFLOPS, achieving 55 FPS on a CPU and 109 FPS on a GPU.</p>
+                <h2 data-i18n="pose_intro_heading">Introduction</h2>
                 <p>
                   Single-hand pose estimation has seen substantial success across various fields, including industrial
                   applications, primarily due to advancements in deep network architectures. Recent mesh reconstruction
@@ -141,7 +133,7 @@
                   similarities of nodes and ignores the graph structure information, such as the adjacency relations
                   among nodes ...
                 </p>
-                <p>Read our paper. (Coming soon)</p>
+                <p data-i18n="pose_read_paper">Read our paper. (Coming soon)</p>
                 <!-- <embed src="assets/pdf/19D-P-4.pdf" width="800px" height="2100px" /> -->
                 
               </div>
@@ -195,6 +187,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
 
 </body>
 

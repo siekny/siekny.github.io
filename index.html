@@ -53,30 +53,11 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <!-- <li><a href="#services">Services</a></li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#hero" class="active" data-i18n="nav_home">Home</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#resume" data-i18n="nav_resume">Resume</a></li>
+          <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -86,6 +67,12 @@
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
         <a href="https://www.linkedin.com/in/siekny-hor-862898151/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <div class="lang-switcher d-flex align-items-center">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="ko">KO</button>
       </div>
 
     </div>
@@ -100,11 +87,11 @@
 
         <div class="row align-items-center content">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h2>Researcher & Developer with Passion</h2>
-            <p class="lead">Transforming ideas into solutions through development</p>
+            <h2 data-i18n="hero_title">Researcher & Developer with Passion</h2>
+            <p class="lead" data-i18n="hero_subtitle">Transforming ideas into solutions through development</p>
             <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
-              <a href="#portfolio" class="btn btn-primary">View My Work</a>
-              <a href="#contact" class="btn btn-outline">Let's Connect</a>
+              <a href="#portfolio" class="btn btn-primary" data-i18n="hero_btn_work">View My Work</a>
+              <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_connect">Let's Connect</a>
             </div>
             <!-- <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
               <div class="stat-item">
@@ -140,19 +127,14 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
+        <h2 data-i18n="section_about">About</h2>
         <div class="title-shape">
           <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
             <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
               stroke-width="2"></path>
           </svg>
         </div>
-        <p>I have experience in Web development and Android mobile application developmennt, computer vision and deep
-          learning, specializing in human detection, 3D pose estimation,
-          object detection, image classification, image translation. As a
-          researcher, I am passionate about advancing deep learning technologies and software solutions.
-          <!-- I am seeking an opportunity to contribute my diverse skills and experience where I can create meaningful value. -->
-        </p>
+        <p data-i18n="about_bio">I have experience in Web development and Android mobile application development, computer vision and deep learning, specializing in human detection, 3D pose estimation, object detection, image classification, image translation. As a researcher, I am passionate about advancing deep learning technologies and software solutions.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -166,49 +148,46 @@
 
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
-              <span class="subtitle">About Me</span>
+              <span class="subtitle" data-i18n="about_subtitle">About Me</span>
 
-              <h2>Research &amp; Develop</h2>
+              <h2 data-i18n="about_heading">Research &amp; Develop</h2>
 
-              <p class="lead mb-4">I am passionate about AI technologies such as deep learning and computer vision, as
-                well as software development, to build impactful, real-world products and services.</p>
+              <p class="lead mb-4" data-i18n="about_lead">I am passionate about AI technologies such as deep learning and computer vision, as well as software development, to build impactful, real-world products and services.</p>
 
               <div class="personal-info">
                 <div class="row g-4">
                   <div class="col-6">
                     <div class="info-item">
-                      <span class="label">Name</span>
+                      <span class="label" data-i18n="label_name">Name</span>
                       <span class="value">Siekny Hor</span>
                     </div>
                   </div>
 
                   <div class="col-6">
                     <div class="info-item">
-                      <span class="label">Phone</span>
+                      <span class="label" data-i18n="label_phone">Phone</span>
                       <span class="value">(+82)10-2996-9842</span>
                     </div>
                   </div>
 
                   <div class="col-6">
                     <div class="info-item">
-                      <span class="label">Age</span>
+                      <span class="label" data-i18n="label_age">Age</span>
                       <span class="value" id="age-value">28 Year-old</span>
                     </div>
                   </div>
 
                   <div class="col-6">
                     <div class="info-item">
-                      <span class="label">Email</span>
+                      <span class="label" data-i18n="label_email">Email</span>
                       <span class="value">sieknyhor@gmail.com</span>
                     </div>
                   </div>
 
-
-
                   <div class="col-6">
                     <div class="info-item">
-                      <span class="label">Nationality</span>
-                      <span class="value">Cambodia</span>
+                      <span class="label" data-i18n="label_nationality">Nationality</span>
+                      <span class="value" data-i18n="val_nationality">Cambodia</span>
                     </div>
                   </div>
                 </div>
@@ -249,7 +228,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
+        <h2 data-i18n="section_resume">Resume</h2>
         <div class="title-shape">
           <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
             <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
@@ -266,7 +245,7 @@
           <div class="col-12">
             <div class="resume-wrapper">
               <div class="resume-block" data-aos="fade-up">
-                <h2>Work Experience</h2>
+                <h2 data-i18n="resume_work">Work Experience</h2>
                 <!--                 <p class="lead">Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet
                   adipiscing sem neque sed ipsum.</p> -->
 
@@ -274,130 +253,109 @@
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-left">
                       <h4 class="company">ZerOneDay ((주) 제로원데이), South Korea</h4>
-                      <span class="period">Nov, 2025 - Present</span>
+                      <span class="period" data-i18n="job1_period">Nov, 2025 - Present</span>
                     </div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
-                      <h3 class="position">AI Developer</h3>
-                      <p class="description">Built a fully offline and Online-capable AI voice assistant embedded in a
-                        Poomsae training kiosk. Users interact with the application —
-                        controlling screen navigations, asking their performance records, and general questions about
-                        poomsae by voice.
-                        .</p>
+                      <h3 class="position" data-i18n="job1_pos">AI Developer</h3>
+                      <p class="description" data-i18n="job1_desc">Built a fully offline and online-capable AI voice assistant embedded in a Poomsae training kiosk. Users interact with the application — controlling screen navigations, asking their performance records, and general questions about poomsae by voice.</p>
                     </div>
                   </div>
 
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-left">
                       <h4 class="company">Samsung Medical Center (삼성서울병원 미래의학연구원), South Korea</h4>
-                      <span class="period">Sep, 2024 - Mar, 2025</span>
+                      <span class="period" data-i18n="job2_period">Sep, 2024 - Mar, 2025</span>
                     </div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
-                      <h3 class="position">AI Researcher</h3>
-                      <p class="description">Explore advanced deep learning techniques for image translation and
-                        develop deep learning models to reconstruct CT scans from X-ray images.
-                        To evaluate how well the model generates CT images compared to real CT scans, we focused on the
-                        lung region and structures such as nodules.</p>
+                      <h3 class="position" data-i18n="job2_pos">AI Researcher</h3>
+                      <p class="description" data-i18n="job2_desc">Explored advanced deep learning techniques for image translation and developed deep learning models to reconstruct CT scans from X-ray images. Evaluation focused on the lung region and structures such as nodules.</p>
                     </div>
                   </div>
 
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="timeline-left">
                       <h4 class="company">Korea Software HRD Center, Cambodia</h4>
-                      <span class="period">2020 - 2021</span>
+                      <span class="period" data-i18n="job3_period">Feb, 2020 - Jun, 2021</span>
                     </div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
-                      <h3 class="position">IT Instructor</h3>
-                      <!-- <p class="description">
-                        Curabitur ullamcorper ultricies nisi nam eget dui etiam rhoncus maecenas tempus.
-                      </p> -->
+                      <h3 class="position" data-i18n="job3_pos">IT Instructor</h3>
                       <ul>
-                        <li>Regularly update course materials to align with emerging technologies and evolving
-                          curriculum needs.</li>
-                        <li>Be responsible for teaching Java programming, SQL database management, and React Native
-                          mobile app development.
-                        </li>
-                        <li>Design and implement curriculums to equip students with up-to-date technical skills.</li>
-                        <li>Review and provide feedback on students' work..</li>
+                        <li data-i18n="job3_li1">Regularly update course materials to align with emerging technologies and evolving curriculum needs.</li>
+                        <li data-i18n="job3_li2">Responsible for teaching Java programming, SQL database management, and React Native mobile app development.</li>
+                        <li data-i18n="job3_li3">Design and implement curriculums to equip students with up-to-date technical skills.</li>
+                        <li data-i18n="job3_li4">Review and provide feedback on students' work.</li>
                       </ul>
-                      <p></p>
                     </div>
                   </div>
 
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="timeline-left">
                       <h4 class="company">Sister of Code, Cambodia</h4>
-                      <span class="period">Sep, 2020 - Dec, 2020</span>
+                      <span class="period" data-i18n="job4_period">Sep, 2020 - Dec, 2020</span>
                     </div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
-                      <h3 class="position">Sister of Code Mentor</h3>
-                      <p class="description">
-                        delivering a three-module coding program covering:
-                      </p>
+                      <h3 class="position" data-i18n="job4_pos">Sister of Code Mentor</h3>
+                      <p class="description" data-i18n="job4_desc">Delivering a three-module coding program covering:</p>
                       <ul>
-                        <li>Visual Coding using Code.org.</li>
-                        <li>Game Development with Scratch.</li>
-                        <li>Website Development with HTML/CSS and Wix.</li>
+                        <li data-i18n="job4_li1">Visual Coding using Code.org.</li>
+                        <li data-i18n="job4_li2">Game Development with Scratch.</li>
+                        <li data-i18n="job4_li3">Website Development with HTML/CSS and Wix.</li>
                       </ul>
-                      <p></p>
                     </div>
                   </div>
 
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="timeline-left">
-                      <h4 class="company">Plan-B (Cambodia) Co., Ltd..</h4>
-                      <span class="period">Feb, 2018-Mar, 2019</span>
+                      <h4 class="company">Plan-B (Cambodia) Co., Ltd.</h4>
+                      <span class="period" data-i18n="job5_period">Feb, 2018 - Mar, 2019</span>
                     </div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
-                      <h3 class="position">Web Designer (Part-time)</h3>
-                      <p class="description">Developed comprehensive style guides on visual elements such as colors,
-                        fonts, and imagery usage guidelines.</p>
+                      <h3 class="position" data-i18n="job5_pos">Web Designer (Part-time)</h3>
+                      <p class="description" data-i18n="job5_desc">Developed comprehensive style guides on visual elements such as colors, fonts, and imagery usage guidelines.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div class="resume-block" data-aos="fade-up" data-aos-delay="100">
-                <h2>My Education</h2>
+                <h2 data-i18n="resume_edu">My Education</h2>
                 <!--                 <p class="lead">Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet
                   adipiscing.</p> -->
 
                 <div class="timeline">
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-left">
-                      <h4 class="company">Ulsan National Institue of Science and Technology (울산과학기술원)</h4>
-                      <span class="period">2022-2024</span>
+                      <h4 class="company">Ulsan National Institute of Science and Technology (울산과학기술원)</h4>
+                      <span class="period" data-i18n="edu1_period">2022 - 2024</span>
                     </div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
-                      <h3 class="position">Master of Artificial Intelligence</h3>
-                      <p class="description">Research Interest in “Deep Learning, Computer Vision, Object Detection,
-                        3D Hand Pose Estimation”.
-                        Thesis on “Rethinking Fast and Accurate 3D Hand Pose Estimation”, a lightweight graph-based
-                        network optimized for both accuracy and efficiency in 3D single-hand pose estimation..</p>
+                      <h3 class="position" data-i18n="edu1_pos">Master of Artificial Intelligence</h3>
+                      <p class="description" data-i18n="edu1_desc">Research Interest in “Deep Learning, Computer Vision, Object Detection, 3D Hand Pose Estimation”. Thesis on “Rethinking Fast and Accurate 3D Hand Pose Estimation”, a lightweight graph-based network optimized for both accuracy and efficiency in 3D single-hand pose estimation.</p>
                     </div>
                   </div>
 
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="timeline-left">
                       <h4 class="company">Royal University of Phnom Penh</h4>
-                      <span class="period">2016 - 2020</span>
+                      <span class="period" data-i18n="edu2_period">2016 - 2020</span>
                     </div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
-                      <h3 class="position">Computer Science</h3>
-                      <p class="description">Specialize in Software development.</p>
+                      <h3 class="position" data-i18n="edu2_pos">Computer Science</h3>
+                      <p class="description" data-i18n="edu2_desc">Specialize in Software development.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div class="resume-block" data-aos="fade-up" data-aos-delay="100">
-                <h2>Training Program</h2>
+                <h2 data-i18n="resume_training">Training Program</h2>
                 <!--                 <p class="lead">Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet
                   adipiscing.</p> -->
 
@@ -405,30 +363,28 @@
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-left">
                       <h4 class="company">SeoKyeong University (서경대학교)</h4>
-                      <span class="period">2021-2022</span>
+                      <span class="period" data-i18n="train1_period">2021 - 2022</span>
                     </div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
-                      <h3 class="position">Korean Language Program</h3>
-                      <li>Be able to hold daily conversations in Korean.</li>
-                      <li>Achieve TOPIK Level 4.</li>
+                      <h3 class="position" data-i18n="train1_pos">Korean Language Program</h3>
+                      <li data-i18n="train1_li1">Be able to hold daily conversations in Korean.</li>
+                      <li data-i18n="train1_li2">Achieve TOPIK Level 4.</li>
                     </div>
                   </div>
 
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="timeline-left">
                       <h4 class="company">Korea Software HRD Center</h4>
-                      <span class="period">2019 - 2020</span>
+                      <span class="period" data-i18n="train2_period">2019 - 2020</span>
                     </div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
-                      <h3 class="position">Software Development Training</h3>
+                      <h3 class="position" data-i18n="train2_pos">Software Development Training</h3>
                       <ul>
-                        <li>Complete a full-time course with lectures, lab research, hands-on practice, tests, and
-                          project development.</li>
-                        <li>Developed a web project using HTML, CSS (frontend), PostgreSQL, and Spring Boot (backend).
-                        </li>
-                        <li>Worked on an Android mobile app using Java.</li>
+                        <li data-i18n="train2_li1">Complete a full-time course with lectures, lab research, hands-on practice, tests, and project development.</li>
+                        <li data-i18n="train2_li2">Developed a web project using HTML, CSS (frontend), PostgreSQL, and Spring Boot (backend).</li>
+                        <li data-i18n="train2_li3">Worked on an Android mobile app using Java.</li>
                       </ul>
                     </div>
                   </div>
@@ -448,7 +404,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
+        <h2 data-i18n="section_portfolio">Portfolio</h2>
         <div class="title-shape">
           <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
             <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor"
@@ -465,10 +421,10 @@
 
           <div class="portfolio-filters-container" data-aos="fade-up" data-aos-delay="200">
             <ul class="portfolio-filters isotope-filters">
-              <li data-filter="*" class="filter-active">All Work</li>
-              <li data-filter=".filter-ai">AI Research</li>
-              <li data-filter=".filter-web">Web Development</li>
-              <li data-filter=".filter-mobile">Mobile Development</li>
+              <li data-filter="*" class="filter-active" data-i18n="filter_all">All Work</li>
+              <li data-filter=".filter-ai" data-i18n="filter_ai">AI Research</li>
+              <li data-filter=".filter-web" data-i18n="filter_web">Web Development</li>
+              <li data-filter=".filter-mobile" data-i18n="filter_mobile">Mobile Development</li>
             </ul>
           </div>
 
@@ -487,11 +443,9 @@
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">AI Research</span>
-                  <h3>AI Voice Agent </h3>
-                  <p>Built a fully offline and online-capable AI voice assistant embedded in a Poomsae training kiosk.
-                    Users interact with the entire application — selecting modes, controlling practice sessions, and
-                    asking coaching questions — entirely by voice.</p>
+                  <span class="category" data-i18n="proj1_cat">AI Research</span>
+                  <h3 data-i18n="proj1_title">AI Voice Agent</h3>
+                  <p data-i18n="proj1_desc">Built a fully offline and online-capable AI voice assistant embedded in a Poomsae training kiosk. Users interact with the entire application — selecting modes, controlling practice sessions, and asking coaching questions — entirely by voice.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -509,9 +463,9 @@
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">AI Research</span>
-                  <h3>CT Reconstruction from X-Ray Images</h3>
-                  <p>Developing a deep learning model to reconstruct CT scan from X-ray images.</p>
+                  <span class="category" data-i18n="proj2_cat">AI Research</span>
+                  <h3 data-i18n="proj2_title">CT Reconstruction from X-Ray Images</h3>
+                  <p data-i18n="proj2_desc">Developing a deep learning model to reconstruct CT scan from X-ray images.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -529,10 +483,9 @@
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">AI Research</span>
-                  <h3>3D Pose Estimation</h3>
-                  <p>A lightweight graph-based network optimized for both accuracy and efficiency in 3D single-hand pose
-                    estimation.</p>
+                  <span class="category" data-i18n="proj3_cat">AI Research</span>
+                  <h3 data-i18n="proj3_title">3D Pose Estimation</h3>
+                  <p data-i18n="proj3_desc">A lightweight graph-based network optimized for both accuracy and efficiency in 3D single-hand pose estimation.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -549,10 +502,9 @@
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">AI Research</span>
-                  <h3>Human Detection</h3>
-                  <p>An efficient real-time human detection model that accurately predicts occlusions and detects small
-                    humans.</p>
+                  <span class="category" data-i18n="proj4_cat">AI Research</span>
+                  <h3 data-i18n="proj4_title">Human Detection</h3>
+                  <p data-i18n="proj4_desc">An efficient real-time human detection model that accurately predicts occlusions and detects small humans.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -590,10 +542,9 @@
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Web Development</span>
-                  <h3>MyAlumni</h3>
-                  <p>A comprehensive web application for alumni information, designed to efficiently handle and organize
-                    alumni records.</p>
+                  <span class="category" data-i18n="proj5_cat">Web Development</span>
+                  <h3 data-i18n="proj5_title">MyAlumni</h3>
+                  <p data-i18n="proj5_desc">A comprehensive web application for alumni information, designed to efficiently handle and organize alumni records.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -610,10 +561,9 @@
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Mobile Development</span>
-                  <h3>MathForum Android App</h3>
-                  <p>A mobile app that connects students in an online math community, allowing them to share knowledge
-                    and find solutions quickly and reliably.</p>
+                  <span class="category" data-i18n="proj6_cat">Mobile Development</span>
+                  <h3 data-i18n="proj6_title">MathForum Android App</h3>
+                  <p data-i18n="proj6_desc">A mobile app that connects students in an online math community, allowing them to share knowledge and find solutions quickly and reliably.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -634,10 +584,9 @@
         <div class="row g-5">
           <div class="col-lg-6">
             <div class="content" data-aos="fade-up" data-aos-delay="200">
-              <div class="section-category mb-3">Contact</div>
-              <h2 class="display-5 mb-4">Any more questions about me?</h2>
-              <p class="lead mb-4">Email us with any questions or inquiries or call. We would be happy to answer your
-                questions.</p>
+              <div class="section-category mb-3" data-i18n="section_contact_label">Contact</div>
+              <h2 class="display-5 mb-4" data-i18n="contact_heading">Any more questions about me?</h2>
+              <p class="lead mb-4" data-i18n="contact_lead">Email us with any questions or inquiries or call. We would be happy to answer your questions.</p>
 
               <div class="contact-info mt-5">
                 <div class="info-item d-flex mb-3">
@@ -670,28 +619,28 @@
                     <input type="hidden" name="from_name" value="Portfolio Contact Form">
 
                     <div class="col-12">
-                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                      <input type="text" name="name" class="form-control" placeholder="Your Name" data-i18n-placeholder="placeholder_name" required="">
                     </div>
 
                     <div class="col-12 ">
-                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                      <input type="email" class="form-control" name="email" placeholder="Your Email" data-i18n-placeholder="placeholder_email" required="">
                     </div>
 
                     <div class="col-12">
-                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                      <input type="text" class="form-control" name="subject" placeholder="Subject" data-i18n-placeholder="placeholder_subject" required="">
                     </div>
 
                     <div class="col-12">
-                      <textarea class="form-control" name="message" rows="6" placeholder="Message"
+                      <textarea class="form-control" name="message" rows="6" placeholder="Message" data-i18n-placeholder="placeholder_message"
                         required=""></textarea>
                     </div>
 
                     <div class="col-12 text-center">
                       <div class="loading">Loading</div>
                       <div class="error-message"></div>
-                      <div class="sent-message">Your message has been sent. Thank you!</div>
+                      <div class="sent-message" data-i18n="contact_sent">Your message has been sent. Thank you!</div>
 
-                      <button type="submit" class="btn btn-submit w-100">Submit Message</button>
+                      <button type="submit" class="btn btn-submit w-100" data-i18n="contact_submit">Submit Message</button>
                     </div>
 
                   </div>
@@ -774,6 +723,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
   <script src="assets/js/app.js"></script>
 
 </body>
