@@ -112,12 +112,12 @@ const i18n = {
     breadcrumb_home: '홈', breadcrumb_category: '카테고리',
     breadcrumb_current: '포트폴리오 상세',
 
-    hero_title: '열정을 가진 연구원 & 개발자',
+    hero_title: '연구 & 개발',
     hero_subtitle: '개발을 통해 아이디어를 솔루션으로 변환합니다',
     hero_btn_work: '작업물 보기', hero_btn_connect: '연락하기',
 
     section_about: '소개',
-    about_bio: '웹 개발, 안드로이드 모바일 앱 개발, 컴퓨터 비전 및 딥러닝 분야의 경험을 보유하고 있으며, 인체 탐지, 3D 자세 추정, 객체 탐지, 이미지 분류, 이미지 변환을 전문으로 합니다. 연구자로서 딥러닝 기술과 소프트웨어 솔루션의 발전에 열정을 갖고 있습니다.',
+    about_bio: '컴퓨터 비전 및 딥러닝 분야의 경험을 보유하고 있으며, 음성 에이전트, 인체 탐지, 3D 자세 추정, 객체 탐지, 이미지 분류 경험 쌓았습니다. 연구자로서 딥러닝 기술과 솔루션의 발전에 열정을 갖고 있습니다.',
     about_subtitle: '저에 대해', about_heading: '연구 & 개발',
     about_lead: '저는 딥러닝, 컴퓨터 비전 등 AI 기술과 소프트웨어 개발에 열정을 갖고 있으며, 실질적인 영향력 있는 제품 및 서비스를 만들기 위해 노력합니다.',
     label_name: '이름', label_phone: '전화번호', label_age: '나이',
