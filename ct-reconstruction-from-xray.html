@@ -106,7 +106,7 @@
 
       <div class="title-wrapper">
         <h1 data-i18n="ct_title">CT Reconstruction from X-Ray Images</h1>
-        <p data-i18n="ct_subtitle">Developing a deep learning model to reconstruct CT scan from X-ray images.</p>
+        <p data-i18n="ct_subtitle">A deep learning model that reconstructs CT scans from X-ray images.</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -135,10 +135,10 @@
             <div class="position-sticky" style="top: 40px">
               <div class="portfolio-description">
                 <h2 data-i18n="ct_summary_heading">Summary</h2>
-                <p data-i18n="ct_summary">CT scans are more essential for accurate disease diagnosis, offering detailed 3D information. However, they are significantly more expensive than X-ray machines, making them less accessible in clinical settings. In this work, we propose a method called XR2CT to reconstruct CT images from a single X-ray using a GAN-based approach. Our method includes a 2D mapping network and a 3D encoder-decoder. Through qualitative and quantitative evaluations, our model demonstrates improved structural accuracy compared to existing methods.</p>
+                <p data-i18n="ct_summary">CT scans are essential for accurate disease diagnosis because they provide detailed 3D information. However, CT scanners are much more expensive than X-ray machines, which makes CT less accessible in clinical settings. In this work, we propose XR2CT, a GAN-based method that reconstructs CT images from a single X-ray. Our method includes a 2D mapping network and a 3D encoder-decoder. Qualitative and quantitative evaluations show that our model achieves better structural accuracy than existing methods.</p>
                 <h2 data-i18n="ct_intro_heading">Introduction</h2>
-                <p data-i18n="ct_intro">X-ray and CT imaging are commonly used in hospitals. CT scans offer a significant advantage by presenting tissues in 3D, effectively resolving the tissue of overlapping structures seen in 2D imaging. However, CT scans are expensive and require extensive infrastructure, making them inaccessible in resource-limited or underserved areas. In contrast, X-rays are cheaper and more widely available imaging modality, but providing limited 2D anatomical information, which can obstruct accurate diagnosis. In this work, we propose a method to reconstruct a 3D CT volume from a single X-ray captured from an orthogonal plane. The major challenge in reconstruction is the ambiguity inherent in X-ray imaging, multiple different 3D CT volume can produce the same 2D X-ray when projected. Existing method, such as X2CT-GAN[1], used generative adversarial networks (GANs) for CT reconstruction, demonstrating promising results. However, it loses high-frequency details and produces low-resolution outputs due to the challenges of inverse imaging problems. To address these issues and enhance reconstruction performance, we introduce a method called XR2CT: Reconstruction CT from a Single X-Ray view with GAN. Our method uses a single frontal X-ray image as input and incorporates an initial template CT to guide the 3D network. The generated 3D CT volumes are then passed into the discriminator for improved fidelity.</p>
-                <p data-i18n="ct_read_paper">Read our paper. (Note that we use only a single X-ray as input).</p>
+                <p data-i18n="ct_intro">X-ray and CT imaging are commonly used in hospitals. CT scans have a significant advantage: they show tissues in 3D, which resolves the overlapping structures seen in 2D images. However, CT scans are expensive and require extensive infrastructure, which makes them inaccessible in resource-limited or underserved areas. In contrast, X-ray imaging is cheaper and more widely available, but it provides only limited 2D anatomical information, which can hinder accurate diagnosis. In this work, we propose a method to reconstruct a 3D CT volume from a single X-ray captured from an orthogonal plane. The main challenge is the ambiguity inherent in X-ray imaging: many different 3D CT volumes can produce the same 2D X-ray when projected. Existing methods such as X2CT-GAN [1] use generative adversarial networks (GANs) for CT reconstruction and show promising results. However, they lose high-frequency details and produce low-resolution outputs because inverse imaging problems are difficult. To address these issues and improve reconstruction performance, we introduce a method called XR2CT: Reconstruction CT from a Single X-Ray view with GAN. Our method uses a single frontal X-ray image as input and incorporates an initial template CT to guide the 3D network. The generated 3D CT volumes are then passed to the discriminator to improve fidelity.</p>
+                <p data-i18n="ct_read_paper">Read our paper below. Note: we use only a single X-ray as input.</p>
                 <embed src="assets/pdf/19D-P-4.pdf" width="800px" height="2100px" />
                 <!-- <div class="testimonial-item">
                   <p>
@@ -193,7 +193,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <strong class="px-1 sitename" data-i18n="name_full">Siekny Hor</strong> <span data-i18n="footer_rights">All Rights Reserved</span>
+        <p>© <strong class="px-1 sitename" data-i18n="name_full">Siekny Hor</strong> <span data-i18n="footer_rights">All rights reserved</span>
         </p>
       </div>
       <div class="social-links d-flex justify-content-center">

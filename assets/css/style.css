@@ -629,3 +629,59 @@ body:has(.chat--open) .scroll-down {
   line-height: 1.75;
   overflow-wrap: break-word;
 }
+
+/* NOT FOUND (404.html)
+=============== */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 100vh;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.not-found-logo {
+  font-family: var(--heading-font);
+  font-size: 28px;
+  color: var(--heading-color);
+}
+
+.not-found .not-found-code {
+  margin: 8px 0 0;
+  font-family: var(--heading-font);
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent-color);
+}
+
+.not-found h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.not-found p {
+  max-width: 480px;
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
+
+.not-found-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: 500;
+}
+
+.not-found-home:hover {
+  background: color-mix(in srgb, var(--accent-color), #000 15%);
+  color: #fff;
+}

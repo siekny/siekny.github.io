@@ -131,10 +131,10 @@
             <div class="position-sticky" style="top: 40px">
               <div class="portfolio-description">
                 <h2 data-i18n="pose_summary_heading">Summary</h2>
-                <p data-i18n="pose_summary">Hand pose estimation has gained significant interest recently, leading to the development of various methods. While existing approaches aim to improve performance, they often encounter efficiency challenges which make it hard to run in real-time. We propose a lightweight graph-based network using Chebyshev Graph Convolutions (ChebGConv). Our model has only 8.48M parameters and requires 1.7 GFLOPS, achieving 55 FPS on a CPU and 109 FPS on a GPU.</p>
+                <p data-i18n="pose_summary">Hand pose estimation has gained significant interest recently, leading to the development of various methods. Although existing approaches improve accuracy, they often face efficiency challenges that make real-time use difficult. We propose a lightweight graph-based network using Chebyshev Graph Convolutions (ChebGConv). Our model has only 8.48M parameters and requires 1.7 GFLOPs, achieving 55 FPS on a CPU and 109 FPS on a GPU.</p>
                 <h2 data-i18n="pose_intro_heading">Introduction</h2>
-                <p data-i18n="pose_intro">Single-hand pose estimation has seen substantial success across various fields, including industrial applications, primarily due to advancements in deep network architectures. Recent mesh reconstruction algorithms [8, 10, 31, 41, 49, 54] are typically trained end-to-end from the input image to the output mesh. While these methods have enhanced performance, they often demand greater computational resources and increased complexity. Previous works [8, 53] have demonstrated that CNN-based structure information is critical for learning feature representations for 3D hand pose estimation. However, the CNN-based method is weak in precisely modeling the kinematic structure information. To better model the kinematic structure information, several studies [41, 49, 54, 71] employ attention mechanism in the transformer to capture the global visual information over the entire feature representation. This allows interactions among all nodes, thereby modeling their relations. However, the self-attention builds upon calculating similarities of nodes and ignores the graph structure information, such as the adjacency relations among nodes ...</p>
-                <p data-i18n="pose_read_paper">Read our paper. (Coming soon)</p>
+                <p data-i18n="pose_intro">Single-hand pose estimation has seen substantial success across various fields, including industrial applications, mainly due to advances in deep network architectures. Recent mesh reconstruction algorithms [8, 10, 31, 41, 49, 54] are typically trained end-to-end, from the input image to the output mesh. While these methods have improved performance, they often demand more computational resources and add complexity. Previous works [8, 53] have shown that CNN-based structure information is critical for learning feature representations for 3D hand pose estimation. However, CNN-based methods are weak at precisely modeling kinematic structure. To model it better, several studies [41, 49, 54, 71] use the attention mechanism of transformers to capture global visual information across the entire feature representation. This allows interactions among all nodes and so models their relations. However, self-attention is based on similarities between nodes and ignores graph structure information, such as the adjacency relations among nodes ...</p>
+                <p data-i18n="pose_read_paper">Paper coming soon.</p>
                 <!-- <embed src="assets/pdf/19D-P-4.pdf" width="800px" height="2100px" /> -->
                 
               </div>
@@ -152,7 +152,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <strong class="px-1 sitename" data-i18n="name_full">Siekny Hor</strong> <span data-i18n="footer_rights">All Rights Reserved</span>
+        <p>© <strong class="px-1 sitename" data-i18n="name_full">Siekny Hor</strong> <span data-i18n="footer_rights">All rights reserved</span>
         </p>
       </div>
       <div class="social-links d-flex justify-content-center">

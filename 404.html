@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script>
+    // Apply the saved (or system) colour theme before the page is drawn.
+    (function () {
+      var theme = null;
+      try { theme = localStorage.getItem('theme'); } catch (e) {}
+      if (theme !== 'dark' && theme !== 'light') {
+        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
+  <title data-i18n="title_404">Page not found – Siekny Hor</title>
+  <meta name="robots" content="noindex">
+
+  <!-- Root paths (/assets/...) so this page also works for missing addresses in sub-folders. -->
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans:wght@400;500;700&family=Questrial:wght@400&family=Noto+Sans+Khmer:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main class="not-found">
+    <a href="/" class="not-found-logo" data-i18n="logo">SNH</a>
+    <p class="not-found-code" aria-hidden="true">404</p>
+    <h1 data-i18n="nf_title">Page not found</h1>
+    <p data-i18n="nf_text">The page you're looking for doesn't exist or has moved.</p>
+    <a href="/" class="not-found-home"><i class="bi bi-house" aria-hidden="true"></i> <span data-i18n="nf_home">Back to home</span></a>
+  </main>
+
+  <script src="/assets/js/translations.js"></script>
+  <script src="/assets/js/theme.js"></script>
+
+</body>
+
+</html>

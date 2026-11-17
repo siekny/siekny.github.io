@@ -3,6 +3,7 @@
 Addresses without ".html" (for example /ai-voice-coaching-agent) are served
 from the matching .html file, as GitHub Pages does. Pages are never cached,
 so a reload always shows your latest edit.
+Missing pages show 404.html, as on GitHub Pages.
 
 Run from anywhere:   python _serve.py          (port 8000)
                      python _serve.py 8080     (another port)
@@ -29,6 +30,21 @@ class PagesHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header("Cache-Control", "no-store")
         super().end_headers()
+
+    def send_error(self, code, message=None, explain=None):
+        # Show the site's own 404.html for missing pages, as GitHub Pages does.
+        page = os.path.join(ROOT, "404.html")
+        if code == 404 and os.path.isfile(page):
+            with open(page, "rb") as f:
+                body = f.read()
+            self.send_response(404)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            if self.command != "HEAD":
+                self.wfile.write(body)
+            return
+        super().send_error(code, message, explain)
 
 
 if __name__ == "__main__":

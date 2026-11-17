@@ -244,17 +244,5 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  /**
-   * Dynamic age calculation
-   */
-  const ageEl = document.getElementById('age-value');
-  if (ageEl) {
-    const birth = new Date(1998, 3, 2); // April 2, 1998
-    const now = new Date();
-    let age = now.getFullYear() - birth.getFullYear();
-    if (now.getMonth() < birth.getMonth() || (now.getMonth() === birth.getMonth() && now.getDate() < birth.getDate())) age--;
-    ageEl.dataset.age = age; // translations.js shows it in the chosen language
-    ageEl.textContent = age + ' years old';
-  }
 
 })();

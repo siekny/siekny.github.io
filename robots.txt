@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://siekny.github.io/sitemap.xml
