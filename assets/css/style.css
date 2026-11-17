@@ -260,7 +260,7 @@ html[lang="ko"] body {
   }
 }
 
-/* FOOTER: one compact line with the copyright and the LinkedIn icon.
+/* FOOTER: one compact line with the copyright, the template credit and the LinkedIn icon.
 =============== */
 .footer {
   padding: 14px 0;
@@ -280,6 +280,7 @@ html[lang="ko"] body {
 
 .footer .social-links {
   margin-top: 0;
+  order: 2;
 }
 
 .footer .social-links a {
@@ -289,8 +290,24 @@ html[lang="ko"] body {
   font-size: 13px;
 }
 
+/* Template credit (required by the free EasyFolio license), before the LinkedIn icon. */
 .footer .credits {
-  display: none;
+  order: 1;
+  margin: 0;
+  font-size: 12px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.footer .credits::before {
+  content: "·";
+  margin-right: 12px;
+}
+
+/* Phones: the footer wraps to two lines, so the separator dot is not needed. */
+@media (max-width: 575px) {
+  .footer .credits::before {
+    display: none;
+  }
 }
 
 /* LIGHT / DARK MODE
@@ -686,7 +703,7 @@ body:has(.chat--open) .scroll-down {
   color: #fff;
 }
 
-/* Paper link on project pages (opens the publisher's page).
+/* Paper buttons on project pages (RISS thesis link, "Open the paper (PDF)" on phones).
 =============== */
 .paper-link {
   display: inline-flex;
