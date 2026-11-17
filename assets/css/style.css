@@ -616,3 +616,16 @@ body:has(.chat--open) .scroll-down {
   visibility: hidden;
   opacity: 0;
 }
+
+/* KHMER: Latin letters keep the site fonts, Khmer letters use Noto Sans Khmer.
+=============== */
+:root[lang="km"] {
+  --default-font: "Roboto", "Noto Sans Khmer", sans-serif;
+  --heading-font: "Questrial", "Noto Sans Khmer", sans-serif;
+  --nav-font: "Noto Sans", "Noto Sans Khmer", sans-serif;
+}
+
+:root[lang="km"] body {
+  line-height: 1.75;
+  overflow-wrap: break-word;
+}

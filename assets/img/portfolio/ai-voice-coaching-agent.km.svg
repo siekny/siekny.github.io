@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'Noto Sans Khmer', 'Khmer UI', 'Khmer Sangam MN', 'Leelawadee UI', Roboto, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">ភ្នាក់ងារគ្រូបង្វឹកសំឡេង AI</title>
+  <desc id="d">សិស្សក្នុងឥរិយាបថតេក្វាន់ដូសួរសំណួរដោយសំឡេង ហើយម៉ូនីទ័របង្ហាញចម្លើយរបស់គ្រូបង្វឹក និងស្ថានភាពកំពុងស្តាប់។</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff4ec"/>
+      <stop offset="1" stop-color="#eaf0f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="24" fill="url(#bg)"/>
+
+  <!-- Student: pictogram in a front stance, punching toward the monitor -->
+  <g stroke="#0f2943" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M140,212 L132,296"/>                 <!-- torso -->
+    <path d="M140,224 L214,222"/>                 <!-- front arm, punch -->
+    <path d="M140,224 L106,256 L128,282"/>        <!-- rear arm, fist at hip -->
+    <path d="M132,296 L184,340 L188,398"/>        <!-- front leg, bent -->
+    <path d="M132,296 L62,398"/>                  <!-- back leg, straight -->
+  </g>
+  <circle cx="146" cy="180" r="22" fill="#0f2943"/>
+  <rect x="116" y="284" width="34" height="9" rx="4" fill="#e87532" transform="rotate(-6 133 288)"/> <!-- belt -->
+  <line x1="40" y1="404" x2="240" y2="404" stroke="#c9d3de" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Voice waves from the student -->
+  <g fill="none" stroke="#e87532" stroke-width="5" stroke-linecap="round">
+    <path d="M178,150 q10,13 0,26"/>
+    <path d="M192,141 q17,22 0,44"/>
+    <path d="M206,132 q24,31 0,62"/>
+  </g>
+
+  <!-- Monitor -->
+  <rect x="270" y="48" width="490" height="330" rx="20" fill="#0f2943"/>
+  <rect x="284" y="62" width="462" height="302" rx="12" fill="#ffffff"/>
+  <path d="M498,378 h44 l10,34 h-64 z" fill="#0f2943"/>
+  <rect x="452" y="410" width="136" height="12" rx="6" fill="#0f2943"/>
+
+  <!-- Screen: header -->
+  <text x="306" y="96" font-size="17" font-weight="700" fill="#0f2943">គ្រូបង្វឹកសំឡេង AI</text>
+  <rect x="616" y="78" width="112" height="26" rx="13" fill="#fdeee4"/>
+  <circle cx="634" cy="91" r="5" fill="#e87532"/>
+  <text x="646" y="96" font-size="14" font-weight="500" fill="#c4581c">កំពុងស្តាប់</text>
+  <line x1="300" y1="116" x2="730" y2="116" stroke="#e6ebf1" stroke-width="2"/>
+
+  <!-- Screen: the student's question -->
+  <rect x="452" y="132" width="276" height="60" rx="16" fill="#e87532"/>
+  <text font-size="16" fill="#ffffff">
+    <tspan x="470" y="157">Hi ○○, តើខ្ញុំធ្វើចលនា</tspan>
+    <tspan x="470" y="179">ណាខ្សោយជាងគេ?</tspan>
+  </text>
+
+  <!-- Screen: the coach's answer -->
+  <rect x="302" y="208" width="318" height="82" rx="16" fill="#f1f4f8"/>
+  <text font-size="16" fill="#0f2943">
+    <tspan x="320" y="234">ចលនាទី 7៖ ជំហានឈរខាងមុខ</tspan>
+    <tspan x="320" y="256">ខ្លីពេក។ សូមបោះជំហានវែងជាងនេះ</tspan>
+    <tspan x="320" y="278">ហើយរក្សាជើងក្រោយឱ្យត្រង់។</tspan>
+  </text>
+
+  <!-- Screen: voice bar -->
+  <circle cx="326" cy="330" r="20" fill="#e87532"/>
+  <rect x="320" y="318" width="12" height="18" rx="6" fill="#ffffff"/>
+  <path d="M316,330 a10,10 0 0 0 20,0" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="326" y1="340" x2="326" y2="345" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <g fill="#e87532">
+    <rect x="360" y="324" width="6" height="12" rx="3"/>
+    <rect x="372" y="316" width="6" height="28" rx="3"/>
+    <rect x="384" y="320" width="6" height="20" rx="3"/>
+    <rect x="396" y="310" width="6" height="40" rx="3"/>
+    <rect x="408" y="318" width="6" height="24" rx="3"/>
+    <rect x="420" y="322" width="6" height="16" rx="3"/>
+    <rect x="432" y="314" width="6" height="32" rx="3"/>
+    <rect x="444" y="320" width="6" height="20" rx="3"/>
+    <rect x="456" y="325" width="6" height="10" rx="3"/>
+  </g>
+  <text x="478" y="335" font-size="14" fill="#6b7b8c">និយាយបានគ្រប់ពេល មិនចាំបាច់ប៉ះ</text>
+</svg>
