@@ -384,13 +384,17 @@ function applyLang(lang) {
   Object.entries(I18N_ATTRS).forEach(([dataAttr, attr]) => {
     document.querySelectorAll('[' + dataAttr + ']').forEach(el => {
       const text = t[el.getAttribute(dataAttr)];
-      if (text) el.setAttribute(attr, text);
+      if (!text) return;
+      el.setAttribute(attr, text);
+      if ((attr === 'src' || attr === 'href') && el.hasAttribute('data-dark')) el.dataset.light = text;
     });
   });
   const ageEl = document.getElementById('age-value');
   if (ageEl && ageEl.dataset.age && t.age_format) {
     ageEl.textContent = t.age_format.replace('{n}', ageEl.dataset.age);
   }
+  // Show light or dark images for the current theme (assets/js/theme.js).
+  if (window.siteThemeImages) window.siteThemeImages();
   // The lightbox reads image addresses when it starts; refresh its list so a
   // preview opens the image in the chosen language (no extra click handlers).
   if (window.siteLightbox && typeof window.siteLightbox.getElements === 'function') {

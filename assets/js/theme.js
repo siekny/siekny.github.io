@@ -28,6 +28,24 @@
     if (icon) icon.className = dark ? 'bi bi-sun' : 'bi bi-moon-stars';
   }
 
+  // Images marked data-dark have a dark version next to them:
+  // name.svg -> name.dark.svg, name.png / .jpg / .webp -> name.dark.webp.
+  function themeImages() {
+    const dark = current() === 'dark';
+    document.querySelectorAll('[data-dark]').forEach(function (el) {
+      const attr = el.tagName === 'IMG' ? 'src' : 'href';
+      if (!el.dataset.light) el.dataset.light = el.getAttribute(attr);
+      const light = el.dataset.light;
+      const darkPath = light.replace(/\.svg$/i, '.dark.svg').replace(/\.(png|jpe?g|webp)$/i, '.dark.webp');
+      el.setAttribute(attr, dark ? darkPath : light);
+    });
+    // The lightbox reads image addresses when it starts; refresh its list.
+    if (window.siteLightbox && typeof window.siteLightbox.getElements === 'function') {
+      window.siteLightbox.elements = window.siteLightbox.getElements();
+    }
+  }
+  window.siteThemeImages = themeImages;
+
   function apply(theme, remember) {
     root.setAttribute('data-theme', theme);
     root.setAttribute('data-bs-theme', theme);
@@ -35,6 +53,7 @@
       try { localStorage.setItem('theme', theme); } catch (e) { /* storage unavailable */ }
     }
     render();
+    themeImages();
   }
 
   if (button) {
@@ -52,4 +71,5 @@
   }
 
   render();
+  themeImages();
 })();

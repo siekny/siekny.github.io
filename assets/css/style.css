@@ -353,8 +353,7 @@ html[lang="ko"] body {
 
 /* Small screens: keep the logo first; toggle and language sit with the icons. */
 @media (max-width: 1200px) {
-  .header .theme-toggle,
-  .header .lang-switcher {
+  .header .header-actions {
     order: 2;
   }
 }

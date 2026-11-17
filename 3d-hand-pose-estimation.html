@@ -63,28 +63,26 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index" class="active" data-i18n="nav_home">Home</a></li>
+          <li><a href="index" data-i18n="nav_home">Home</a></li>
           <li><a href="index#about" data-i18n="nav_about">About</a></li>
           <li><a href="index#resume" data-i18n="nav_resume">Resume</a></li>
-          <li><a href="index#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="index#portfolio" class="active" data-i18n="nav_portfolio">Portfolio</a></li>
           <li><a href="index#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="https://www.linkedin.com/in/siekny-hor-862898151/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
+      <div class="header-actions d-flex align-items-center">
+        <div class="lang-switcher d-flex align-items-center">
+          <button class="lang-btn active" data-lang="en" lang="en">English</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="ko" lang="ko">한국어</button>
+        </div>
 
-      <button type="button" class="theme-toggle" aria-label="Dark mode" title="Dark mode" aria-pressed="false"
-        data-i18n-aria="theme_toggle" data-i18n-title="theme_toggle">
-        <i class="bi bi-moon-stars" aria-hidden="true"></i>
-      </button>
-
-      <div class="lang-switcher d-flex align-items-center">
-        <button class="lang-btn active" data-lang="en" lang="en">English</button>
-        <span class="lang-divider">|</span>
-        <button class="lang-btn" data-lang="ko" lang="ko">한국어</button>
+        <button type="button" class="theme-toggle" aria-label="Dark mode" title="Dark mode" aria-pressed="false"
+          data-i18n-aria="theme_toggle" data-i18n-title="theme_toggle">
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+        </button>
       </div>
 
     </div>
@@ -117,9 +115,9 @@
 
         <div class="row gy-4 g-lg-5">
           <div class="col-lg-6">
-            <img src="assets/img/portfolio/portfolio-2.png" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/3dhand_1.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/3dhand_2.webp" class="img-fluid mb-4" alt="">
+            <img data-dark src="assets/img/portfolio/portfolio-2.png" class="img-fluid mb-4" alt="">
+            <img data-dark src="assets/img/portfolio/3dhand_1.webp" class="img-fluid mb-4" alt="">
+            <img data-dark src="assets/img/portfolio/3dhand_2.webp" class="img-fluid mb-4" alt="">
 
             <!-- <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid mb-4" alt="">
             <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid mb-4" alt="">
