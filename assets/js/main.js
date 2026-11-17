@@ -117,6 +117,7 @@
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
+  window.siteLightbox = glightbox; // translations.js refreshes it on language change
 
   /**
    * Init isotope layout and filters
@@ -228,7 +229,8 @@
     const now = new Date();
     let age = now.getFullYear() - birth.getFullYear();
     if (now.getMonth() < birth.getMonth() || (now.getMonth() === birth.getMonth() && now.getDate() < birth.getDate())) age--;
-    ageEl.textContent = age + ' Year-old';
+    ageEl.dataset.age = age; // translations.js shows it in the chosen language
+    ageEl.textContent = age + ' years old';
   }
 
 })();

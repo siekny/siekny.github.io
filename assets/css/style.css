@@ -11,6 +11,13 @@
     /* background: #F1F1F1; */
 /* } */
 
+/* KOREAN TEXT: wrap between words, not inside them.
+=============== */
+html[lang="ko"] body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 /* LANGUAGE SWITCHER
 =============== */
 .lang-switcher {
@@ -19,7 +26,7 @@
   gap: 2px;
   margin-left: 12px;
   padding-left: 12px;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .lang-btn {
@@ -46,196 +53,308 @@
 }
 
 .lang-divider {
-  color: rgba(0, 0, 0, 0.2);
+  color: color-mix(in srgb, var(--default-color), transparent 80%);
   font-size: 12px;
   pointer-events: none;
 }
 
-/* CHATBOX
+/* VOICE AGENT PROJECT PAGE
+   One spacing scale: 48px between major blocks,
+   16px under headings and between paragraphs, 8px between list items.
 =============== */
-.chatbox {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
+.portfolio-details.va-page {
+  padding-top: 32px;
 }
 
-/* CONTENT IS CLOSE */
-.chatbox__support {
-    display: flex;
-    flex-direction: column;
-    background: #eee;
-    width: 300px;
-    height: 350px;
-    z-index: -123456;
-    opacity: 0;
-    transition: all .5s ease-in-out;
+.va-page .va-diagram {
+  margin: 0 0 48px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 16px;
+  text-align: center;
 }
 
-/* CONTENT ISOPEN */
-.chatbox--active {
-    transform: translateY(-40px);
-    z-index: 123456;
-    opacity: 1;
-
+.va-page .va-diagram img {
+  width: 100%;
+  max-width: 1100px;
 }
 
-/* BUTTON */
-.chatbox__button {
-    text-align: right;
-    position: fixed;
-    bottom: 10%;
-    right: 1%;
+.va-page .va-diagram figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
-.send__button {
-    padding: 6px;
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.va-page .portfolio-description h2 {
+  margin: 0 0 16px;
 }
 
-
-/* HEADER */
-.chatbox__header {
-    position: sticky;
-    top: 0;
-    background: #e87532 !important;
+.va-page .portfolio-description * + h2 {
+  margin-top: 48px;
 }
 
-/* MESSAGES */
-.chatbox__messages {
-    margin-top: auto;
-    display: flex;
-    overflow-y: scroll;
-    flex-direction: column-reverse;
+.va-page .portfolio-description p {
+  margin: 0 0 16px;
+  text-align: left;
 }
 
-.messages__item {
-    background: orange;
-    max-width: 60.6%;
-    width: fit-content;
+.va-page .portfolio-description ul {
+  margin: 0;
+  padding-left: 20px;
 }
 
-.messages__item--operator {
-    margin-left: auto;
+.va-page .portfolio-description ul li + li {
+  margin-top: 8px;
 }
 
-.messages__item--visitor {
-    margin-right: auto;
+.va-page .portfolio-info {
+  position: sticky;
+  top: 100px;
+  padding: 24px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--default-color), transparent 97%);
 }
 
-/* FOOTER */
-.chatbox__footer {
-    position: sticky;
-    bottom: 0;
+.va-page .portfolio-info h3 {
+  margin: 0 0 16px;
+  padding-bottom: 16px;
 }
 
-.chatbox__support {
-    background: #f9f9f9;
-    height: 450px;
-    width: 350px;
-    box-shadow: 0px 0px 15px rgb(228 207 194);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    position: fixed;
-    bottom: 12%;
-    right: 3%;
-    border: #e87532;
+.va-page .portfolio-info ul {
+  margin: 0;
 }
 
-/* HEADER */
-.chatbox__header {
-    background: var(--primaryGradient);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    box-shadow: var(--primaryBoxShadow);
+.va-page .portfolio-info ul li {
+  padding-bottom: 16px;
 }
 
-.chatbox__image--header {
-    margin-right: 10px;
+.va-page .portfolio-info ul li:last-child {
+  padding-bottom: 0;
 }
 
-.chatbox__heading--header {
-    font-size: 1.2rem;
-    color: white;
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
 }
 
-.chatbox__description--header {
-    font-size: .9rem;
-    color: white;
+.tech-tags span {
+  padding: 3px 10px;
+  font-size: 13px;
+  border-radius: 50px;
+  color: var(--heading-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
 }
 
-/* Messages */
-.chatbox__messages {
-    padding: 0 20px;
+/* Phones: keep the diagram readable by letting it scroll sideways inside its card. */
+@media (max-width: 767px) {
+  .va-page .va-diagram {
+    padding: 12px;
+    overflow-x: auto;
+  }
+
+  .va-page .va-diagram img {
+    min-width: 720px;
+  }
+
+  .va-page .portfolio-info {
+    position: static;
+  }
 }
 
-.messages__item {
-    margin-top: 10px;
-    background: #E0E0E0;
-    padding: 8px 12px;
-    max-width: 70%;
+/* PORTFOLIO CARDS (home page)
+   Same structure for every card: framed image, category, title,
+   a short description, tech tags, and a "View project" link when
+   the project has a details page.
+=============== */
+.portfolio .portfolio-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.messages__item--visitor,
-.messages__item--typing {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+.portfolio .portfolio-card .portfolio-image {
+  background: #f4f5f7;
 }
 
-.messages__item--operator {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background: var(--primary);
-    color: white;
-    background: #e87532;
+.portfolio .portfolio-card .portfolio-image img {
+  padding: 16px;
 }
 
-/* FOOTER */
-.chatbox__footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 20px;
-    background: var(--secondaryGradient);
-    box-shadow: var(--secondaryBoxShadow);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin-top: 20px;
-    background: #e87532;
+.portfolio .portfolio-card .portfolio-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
 }
 
-.chatbox__footer input {
-    width: 80%;
-    border: none;
-    padding: 10px 10px;
-    border-radius: 30px;
-    text-align: left;
+.portfolio .portfolio-card .portfolio-content .category {
+  font-size: 13px;
+  margin-bottom: 8px;
 }
 
-.chatbox__send--footer {
-    color: white;
+.portfolio .portfolio-card .portfolio-content h3 {
+  font-size: 20px;
+  margin: 0 0 8px;
 }
 
-.chatbox__button button,
-.chatbox__button button:focus,
-.chatbox__button button:visited {
-    padding: 10px;
-    background: white;
-    border: none;
-    outline: none;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    box-shadow: 0px 10px 15px rgba(226, 130, 40, 0.1);
-    cursor: pointer;
+.portfolio .portfolio-card .portfolio-content h3 a {
+  color: inherit;
+}
+
+.portfolio .portfolio-card .portfolio-content h3 a:hover {
+  color: var(--accent-color);
+}
+
+/* Room for three lines, so cards in the same row line up. */
+.portfolio .portfolio-card .portfolio-content p {
+  min-height: 4.8em;
+  margin: 0 0 16px;
+}
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-tags li {
+  padding: 3px 10px;
+  font-size: 13px;
+  border-radius: 50px;
+  color: var(--heading-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+}
+
+.portfolio .portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.portfolio .portfolio-link i {
+  transition: transform 0.3s ease;
+}
+
+.portfolio .portfolio-link:hover i {
+  transform: translateX(4px);
+}
+
+.portfolio .section-title p {
+  margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+  .portfolio .portfolio-card .portfolio-content p {
+    min-height: 0;
+  }
+}
+
+/* FOOTER: one compact line with the copyright and the LinkedIn icon.
+=============== */
+.footer {
+  padding: 14px 0;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer .copyright p {
+  font-size: 13px;
+}
+
+.footer .social-links {
+  margin-top: 0;
+}
+
+.footer .social-links a {
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.footer .credits {
+  display: none;
+}
+
+/* LIGHT / DARK MODE
+   The template takes its colours from these variables; dark mode redefines them.
+   data-theme is set on <html> by the head script and assets/js/theme.js.
+=============== */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background-color: #0f1419;
+  --default-color: #e4e8ee;
+  --heading-color: #f3f6f9;
+  --surface-color: #1a2129;
+  --contrast-color: #ffffff;
+  --nav-color: #e4e8ee;
+  --nav-mobile-background-color: #1a2129;
+  --nav-dropdown-background-color: #1a2129;
+  --nav-dropdown-color: #e4e8ee;
+}
+
+:root[data-theme="dark"] .light-background {
+  --background-color: #141b23;
+  --surface-color: #1a2129;
+}
+
+:root[data-theme="dark"] .va-page .va-diagram {
+  background: var(--surface-color);
+}
+
+:root[data-theme="dark"] .portfolio .portfolio-card .portfolio-image {
+  background: #222a33;
+}
+
+:root[data-theme="dark"] .contact .contact-form .form-control,
+:root[data-theme="dark"] .contact .contact-form .form-select {
+  border-color: #39424d;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 12px;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 50%;
+  background: none;
+  color: var(--nav-color);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.theme-toggle:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Small screens: keep the logo first; toggle and language sit with the icons. */
+@media (max-width: 1200px) {
+  .header .theme-toggle,
+  .header .lang-switcher {
+    order: 2;
+  }
 }

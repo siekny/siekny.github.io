@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 430" font-family="Roboto, 'Noto Sans', Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Voice agent pipeline</title>
+  <desc id="d">One voice turn: wake word, speech detection, speech-to-text, a rules-first router, then either screen control or RAG coaching, and a streamed spoken reply. Cloud models online, on-device models offline. The user can interrupt the reply.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f2943"/>
+    </marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e87532"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="430" rx="18" fill="#ffffff"/>
+
+  <text x="550" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#0f2943">One voice turn</text>
+
+  <!-- Stage boxes -->
+  <g font-size="15" font-weight="700" fill="#0f2943" text-anchor="middle">
+    <rect x="20" y="120" width="155" height="90" rx="12" fill="#fdf1ea" stroke="#e87532" stroke-width="2"/>
+    <text x="97.5" y="155">Wake word</text>
+
+    <rect x="195" y="120" width="155" height="90" rx="12" fill="#f3f6f9" stroke="#0f2943" stroke-width="1.5"/>
+    <text x="272.5" y="155">Speech detection</text>
+
+    <rect x="370" y="120" width="155" height="90" rx="12" fill="#f3f6f9" stroke="#0f2943" stroke-width="1.5"/>
+    <text x="447.5" y="155">Speech-to-text</text>
+
+    <rect x="545" y="120" width="155" height="90" rx="12" fill="#fdf1ea" stroke="#e87532" stroke-width="2"/>
+    <text x="622.5" y="155">Router</text>
+
+    <rect x="740" y="55" width="160" height="80" rx="12" fill="#f3f6f9" stroke="#0f2943" stroke-width="1.5"/>
+    <text x="820" y="88">Command</text>
+
+    <rect x="740" y="195" width="160" height="80" rx="12" fill="#fdf1ea" stroke="#e87532" stroke-width="2"/>
+    <text x="820" y="228">Question</text>
+
+    <rect x="935" y="120" width="145" height="90" rx="12" fill="#f3f6f9" stroke="#0f2943" stroke-width="1.5"/>
+    <text x="1007.5" y="155">Text-to-speech</text>
+  </g>
+
+  <!-- Stage details -->
+  <g font-size="12.5" fill="#4a5a6a" text-anchor="middle">
+    <text x="97.5" y="177">custom model</text>
+    <text x="97.5" y="195">"Hi ○○"</text>
+
+    <text x="272.5" y="177">VAD + end-of-turn</text>
+    <text x="272.5" y="195">model</text>
+
+    <text x="447.5" y="177">streaming,</text>
+    <text x="447.5" y="195">domain vocabulary</text>
+
+    <text x="622.5" y="177">rules first,</text>
+    <text x="622.5" y="195">LLM when unclear</text>
+
+    <text x="820" y="108">navigate screens</text>
+    <text x="820" y="124">pause · play video</text>
+
+    <text x="820" y="248">RAG over records</text>
+    <text x="820" y="264">+ knowledge base</text>
+
+    <text x="1007.5" y="177">streamed reply,</text>
+    <text x="1007.5" y="195">screen follows</text>
+  </g>
+
+  <!-- Flow arrows -->
+  <g stroke="#0f2943" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="175" y1="165" x2="192" y2="165"/>
+    <line x1="350" y1="165" x2="367" y2="165"/>
+    <line x1="525" y1="165" x2="542" y2="165"/>
+    <path d="M700,165 H714 V95 H737"/>
+    <path d="M700,165 H714 V235 H737"/>
+    <path d="M900,95 H914 V165 H932"/>
+    <path d="M900,235 H914 V165" marker-end="none"/>
+  </g>
+
+  <!-- Barge-in loop -->
+  <path d="M1007.5,210 V300 H97.5 V213" fill="none" stroke="#e87532" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arrow-accent)"/>
+  <rect x="380" y="286" width="340" height="28" rx="14" fill="#ffffff"/>
+  <text x="550" y="305" text-anchor="middle" font-size="13.5" fill="#c4581c" font-weight="700">Barge-in: the user can interrupt the reply</text>
+
+  <!-- Online / offline -->
+  <g font-size="13.5" text-anchor="middle">
+    <rect x="110" y="350" width="400" height="48" rx="24" fill="#f3f6f9"/>
+    <text x="310" y="379" fill="#0f2943"><tspan font-weight="700">Online:</tspan> cloud speech-to-text, LLM, TTS</text>
+    <rect x="590" y="350" width="400" height="48" rx="24" fill="#f3f6f9"/>
+    <text x="790" y="379" fill="#0f2943"><tspan font-weight="700">No internet:</tspan> automatic on-device models</text>
+  </g>
+</svg>
