@@ -60,7 +60,7 @@
       <a href="index" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">SNH</h1>
+        <h1 class="sitename" data-i18n="logo">SNH</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -688,8 +688,10 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top" data-i18n-aria="scroll_top"><i
+      class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
+  <a href="#" id="scroll-down" class="scroll-down d-flex align-items-center justify-content-center" aria-label="Scroll to bottom" data-i18n-aria="scroll_down"><i
+      class="bi bi-arrow-down-short" aria-hidden="true"></i></a>
 
 
   <!-- Vendor JS Files -->
@@ -706,6 +708,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/translations.js"></script>
   <script src="assets/js/theme.js"></script>
+  <script src="assets/js/chat.js"></script>
 
 </body>
 

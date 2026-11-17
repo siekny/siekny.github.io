@@ -82,6 +82,30 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
+   * Scroll-down button: shown while there is more page below; jumps to the end.
+   */
+  let scrollDown = document.querySelector('.scroll-down');
+
+  function toggleScrollDown() {
+    if (!scrollDown) return;
+    const remaining = document.documentElement.scrollHeight - (window.scrollY + window.innerHeight);
+    remaining > 100 ? scrollDown.classList.add('active') : scrollDown.classList.remove('active');
+  }
+  if (scrollDown) {
+    scrollDown.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  window.addEventListener('load', toggleScrollDown);
+  window.addEventListener('resize', toggleScrollDown);
+  document.addEventListener('scroll', toggleScrollDown);
+
+  /**
    * Animation on scroll function and init
    */
   function aosInit() {
