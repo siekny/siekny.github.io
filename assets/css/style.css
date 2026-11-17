@@ -685,3 +685,25 @@ body:has(.chat--open) .scroll-down {
   background: color-mix(in srgb, var(--accent-color), #000 15%);
   color: #fff;
 }
+
+/* Paper link on project pages (opens the publisher's page).
+=============== */
+.paper-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 1px solid var(--accent-color);
+  border-radius: 50px;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.paper-link:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.paper-link .bi-box-arrow-up-right {
+  font-size: 12px;
+}

@@ -9,7 +9,7 @@ Live at **https://siekny.github.io**.
 |------|------|
 | `index.html` | Home: about, resume, portfolio, contact |
 | `ai-voice-coaching-agent.html` | AI Voice Coaching Agent project |
-| `ct-reconstruction-from-xray.html` | CT Reconstruction from X-Ray Images project |
+| `ct-reconstruction-from-xray.html` | CT Reconstruction from X-Ray Images project ([paper on DBpia](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12132465)) |
 | `3d-hand-pose-estimation.html` | 3D Hand Pose Estimation project |
 | `404.html` | Page shown for addresses that don't exist |
 
