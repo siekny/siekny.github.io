@@ -18,6 +18,18 @@
   </script>
   <title data-i18n="title_ct">CT Reconstruction from X-Ray Images – Siekny Hor</title>
   <meta name="description" content="XR2CT: reconstructing a 3D CT volume from a single X-ray image with a GAN-based deep learning model.">
+  <!-- Link previews (LinkedIn, KakaoTalk, messengers) -->
+  <link rel="canonical" href="https://siekny.github.io/ct-reconstruction-from-xray">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Siekny Hor">
+  <meta property="og:title" content="CT Reconstruction from X-Ray Images – Siekny Hor">
+  <meta property="og:description" content="XR2CT: reconstructing a 3D CT volume from a single X-ray image with a GAN-based deep learning model.">
+  <meta property="og:url" content="https://siekny.github.io/ct-reconstruction-from-xray">
+  <meta property="og:image" content="https://siekny.github.io/assets/img/og/ct-reconstruction-from-xray.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="CT Reconstruction from X-Ray Images: X-rays reconstructed into a 3D CT volume">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
@@ -117,13 +129,13 @@
 
         <div class="row gy-4 g-lg-5">
           <div class="col-lg-6">
-            <img data-dark src="assets/img/portfolio/portfolio-1.png" class="img-fluid mb-4" alt="">
+            <img data-dark src="assets/img/portfolio/portfolio-1.webp" class="img-fluid mb-4" alt="">
             <h5 data-i18n="ct_axial">Axial</h5>
-            <img data-dark src="assets/img/portfolio/xr2ct_axial.png" class="img-fluid mb-4" alt="">
+            <img data-dark src="assets/img/portfolio/xr2ct_axial.webp" class="img-fluid mb-4" alt="">
             <h5 data-i18n="ct_coronal">Coronal</h5>
-            <img data-dark src="assets/img/portfolio/xr2ct_coronal.png" class="img-fluid mb-4" alt="">
+            <img data-dark src="assets/img/portfolio/xr2ct_coronal.webp" class="img-fluid mb-4" alt="">
             <h5 data-i18n="ct_sagittal">Sagittal</h5>
-            <img data-dark src="assets/img/portfolio/xr2ct_sagittal.png" class="img-fluid mb-4" alt="">
+            <img data-dark src="assets/img/portfolio/xr2ct_sagittal.webp" class="img-fluid mb-4" alt="">
             
             <!-- <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid mb-4" alt="">
             <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid mb-4" alt="">
@@ -139,7 +151,8 @@
                 <h2 data-i18n="ct_intro_heading">Introduction</h2>
                 <p data-i18n="ct_intro">X-ray and CT imaging are commonly used in hospitals. CT scans have a significant advantage: they show tissues in 3D, which resolves the overlapping structures seen in 2D images. However, CT scans are expensive and require extensive infrastructure, which makes them inaccessible in resource-limited or underserved areas. In contrast, X-ray imaging is cheaper and more widely available, but it provides only limited 2D anatomical information, which can hinder accurate diagnosis. In this work, we propose a method to reconstruct a 3D CT volume from a single X-ray captured from an orthogonal plane. The main challenge is the ambiguity inherent in X-ray imaging: many different 3D CT volumes can produce the same 2D X-ray when projected. Existing methods such as X2CT-GAN [1] use generative adversarial networks (GANs) for CT reconstruction and show promising results. However, they lose high-frequency details and produce low-resolution outputs because inverse imaging problems are difficult. To address these issues and improve reconstruction performance, we introduce a method called XR2CT: Reconstruction CT from a Single X-Ray view with GAN. Our method uses a single frontal X-ray image as input and incorporates an initial template CT to guide the 3D network. The generated 3D CT volumes are then passed to the discriminator to improve fidelity.</p>
                 <!-- <p data-i18n="ct_read_paper">Read the paper below. Note: we use only a single X-ray as input.</p> -->
-                <embed src="assets/pdf/19D-P-4.pdf" width="800px" height="2100px" />
+                <embed src="assets/pdf/19D-P-4.pdf" type="application/pdf" class="paper-embed d-none d-md-block" title="XR2CT paper (PDF)">
+                <p class="d-md-none"><a href="assets/pdf/19D-P-4.pdf" class="paper-link" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> <span data-i18n="ct_open_pdf">Open the paper (PDF)</span></a></p>
                 <!-- <div class="testimonial-item">
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>

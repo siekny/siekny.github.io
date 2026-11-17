@@ -707,3 +707,12 @@ body:has(.chat--open) .scroll-down {
 .paper-link .bi-box-arrow-up-right {
   font-size: 12px;
 }
+
+/* Embedded paper PDF (CT page): column width on tablets and computers.
+   Phones get an "Open the paper (PDF)" button instead, because most phone
+   browsers can't show a PDF inside a page.
+=============== */
+.paper-embed {
+  width: 100%;
+  height: 2100px;
+}

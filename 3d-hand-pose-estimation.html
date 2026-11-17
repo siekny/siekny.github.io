@@ -18,6 +18,18 @@
   </script>
   <title data-i18n="title_pose">3D Hand Pose Estimation – Siekny Hor</title>
   <meta name="description" content="A lightweight graph-based network for fast and accurate 3D single-hand pose estimation.">
+  <!-- Link previews (LinkedIn, KakaoTalk, messengers) -->
+  <link rel="canonical" href="https://siekny.github.io/3d-hand-pose-estimation">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Siekny Hor">
+  <meta property="og:title" content="3D Hand Pose Estimation – Siekny Hor">
+  <meta property="og:description" content="A lightweight graph-based network for fast and accurate 3D single-hand pose estimation.">
+  <meta property="og:url" content="https://siekny.github.io/3d-hand-pose-estimation">
+  <meta property="og:image" content="https://siekny.github.io/assets/img/og/3d-hand-pose-estimation.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="3D Hand Pose Estimation: 2D pose, mesh and 3D pose predicted from a hand image">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
@@ -117,7 +129,7 @@
 
         <div class="row gy-4 g-lg-5">
           <div class="col-lg-6">
-            <img data-dark src="assets/img/portfolio/portfolio-2.png" class="img-fluid mb-4" alt="">
+            <img data-dark src="assets/img/portfolio/portfolio-2.webp" class="img-fluid mb-4" alt="">
             <img data-dark src="assets/img/portfolio/3dhand_1.webp" class="img-fluid mb-4" alt="">
             <img data-dark src="assets/img/portfolio/3dhand_2.webp" class="img-fluid mb-4" alt="">
 
@@ -134,7 +146,7 @@
                 <p data-i18n="pose_summary">Hand pose estimation has gained significant interest recently, leading to the development of various methods. Although existing approaches improve accuracy, they often face efficiency challenges that make real-time use difficult. We propose a lightweight graph-based network using Chebyshev Graph Convolutions (ChebGConv). Our model has only 8.48M parameters and requires 1.7 GFLOPs, achieving 55 FPS on a CPU and 109 FPS on a GPU.</p>
                 <h2 data-i18n="pose_intro_heading">Introduction</h2>
                 <p data-i18n="pose_intro">Single-hand pose estimation has seen substantial success across various fields, including industrial applications, mainly due to advances in deep network architectures. Recent mesh reconstruction algorithms [8, 10, 31, 41, 49, 54] are typically trained end-to-end, from the input image to the output mesh. While these methods have improved performance, they often demand more computational resources and add complexity. Previous works [8, 53] have shown that CNN-based structure information is critical for learning feature representations for 3D hand pose estimation. However, CNN-based methods are weak at precisely modeling kinematic structure. To model it better, several studies [41, 49, 54, 71] use the attention mechanism of transformers to capture global visual information across the entire feature representation. This allows interactions among all nodes and so models their relations. However, self-attention is based on similarities between nodes and ignores graph structure information, such as the adjacency relations among nodes ...</p>
-                <p data-i18n="pose_read_paper">Paper coming soon.</p>
+                <p><a href="https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&amp;control_no=f9070b700c68fdf2ffe0bdc3ef48d419&amp;outLink=K" class="paper-link" target="_blank" rel="noopener"><i class="bi bi-journal-text" aria-hidden="true"></i> <span data-i18n="pose_read_paper">Read the thesis on RISS</span> <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></p>
                 <!-- <embed src="assets/pdf/19D-P-4.pdf" width="800px" height="2100px" /> -->
                 
               </div>

@@ -109,6 +109,7 @@ const i18n = {
     ct_intro_heading: 'Introduction',
     ct_intro: 'X-ray and CT imaging are commonly used in hospitals. CT scans have a significant advantage: they show tissues in 3D, which resolves the overlapping structures seen in 2D images. However, CT scans are expensive and require extensive infrastructure, which makes them inaccessible in resource-limited or underserved areas. In contrast, X-ray imaging is cheaper and more widely available, but it provides only limited 2D anatomical information, which can hinder accurate diagnosis. In this work, we propose a method to reconstruct a 3D CT volume from a single X-ray captured from an orthogonal plane. The main challenge is the ambiguity inherent in X-ray imaging: many different 3D CT volumes can produce the same 2D X-ray when projected. Existing methods such as X2CT-GAN [1] use generative adversarial networks (GANs) for CT reconstruction and show promising results. However, they lose high-frequency details and produce low-resolution outputs because inverse imaging problems are difficult. To address these issues and improve reconstruction performance, we introduce a method called XR2CT: Reconstruction CT from a Single X-Ray view with GAN. Our method uses a single frontal X-ray image as input and incorporates an initial template CT to guide the 3D network. The generated 3D CT volumes are then passed to the discriminator to improve fidelity.',
     ct_read_paper: 'Read the paper below. Note: we use only a single X-ray as input.',
+    ct_open_pdf: 'Open the paper (PDF)',
     ct_paper_link: 'Read the paper on DBpia',
 
     pose_title: '3D Hand Pose Estimation',
@@ -117,7 +118,7 @@ const i18n = {
     pose_summary: 'Hand pose estimation has gained significant interest recently, leading to the development of various methods. Although existing approaches improve accuracy, they often face efficiency challenges that make real-time use difficult. We propose a lightweight graph-based network using Chebyshev Graph Convolutions (ChebGConv). Our model has only 8.48M parameters and requires 1.7 GFLOPs, achieving 55 FPS on a CPU and 109 FPS on a GPU.',
     pose_intro_heading: 'Introduction',
     pose_intro: 'Single-hand pose estimation has seen substantial success across various fields, including industrial applications, mainly due to advances in deep network architectures. Recent mesh reconstruction algorithms [8, 10, 31, 41, 49, 54] are typically trained end-to-end, from the input image to the output mesh. While these methods have improved performance, they often demand more computational resources and add complexity. Previous works [8, 53] have shown that CNN-based structure information is critical for learning feature representations for 3D hand pose estimation. However, CNN-based methods are weak at precisely modeling kinematic structure. To model it better, several studies [41, 49, 54, 71] use the attention mechanism of transformers to capture global visual information across the entire feature representation. This allows interactions among all nodes and so models their relations. However, self-attention is based on similarities between nodes and ignores graph structure information, such as the adjacency relations among nodes ...',
-    pose_read_paper: 'Paper coming soon.',
+    pose_read_paper: 'Read the thesis on RISS',
 
     // Labels, tags, image addresses and descriptions
     title_home: 'Siekny Hor – AI Engineer',
@@ -297,6 +298,7 @@ const i18n = {
     ct_intro_heading: '소개',
     ct_intro: 'X선과 CT 촬영은 병원에서 흔히 사용됩니다. CT는 조직을 3D로 보여 주어 2D 영상에서 겹쳐 보이는 구조의 문제를 효과적으로 해결한다는 큰 장점이 있습니다. 그러나 CT는 비용이 높고 대규모 인프라가 필요해, 자원이 부족하거나 의료 서비스가 취약한 지역에서는 이용하기 어렵습니다. 반면 X선은 더 저렴하고 널리 보급된 영상 기법이지만, 제한된 2D 해부학적 정보만 제공해 정확한 진단을 방해할 수 있습니다. 이 연구에서는 직교 평면에서 촬영한 단일 X선 영상으로 3D CT 볼륨을 재구성하는 방법을 제안합니다. 재구성의 주요 과제는 X선 영상 고유의 모호성으로, 서로 다른 여러 3D CT 볼륨이 투영되면 같은 2D X선 영상이 될 수 있습니다. X2CT-GAN[1] 등 기존 방법은 생성적 적대 신경망(GAN)으로 CT를 재구성해 유망한 결과를 보였습니다. 그러나 역영상 문제의 어려움 때문에 고주파 세부 정보가 손실되고 해상도가 낮은 결과가 생성됩니다. 이러한 문제를 해결하고 재구성 성능을 높이기 위해 XR2CT(Reconstruction CT from a Single X-Ray view with GAN)라는 방법을 제안합니다. 이 방법은 단일 정면 X선 영상을 입력으로 사용하고, 초기 템플릿 CT로 3D 네트워크를 유도합니다. 생성된 3D CT 볼륨은 판별자(discriminator)로 전달되어 충실도를 높입니다.',
     ct_read_paper: '논문을 읽어보세요. (단일 X선만 입력으로 사용합니다.)',
+    ct_open_pdf: '논문 열기 (PDF)',
     ct_paper_link: 'DBpia에서 논문 보기',
 
     pose_title: '3D 손 자세 추정',
@@ -305,7 +307,7 @@ const i18n = {
     pose_summary: '손 자세 추정은 최근 많은 관심을 받고 있으며 다양한 방법이 개발되었습니다. 기존 방법들은 실시간 처리가 어려운 효율성 문제에 자주 직면합니다. 이 연구에서는 Chebyshev Graph Convolutions(ChebGConv)을 활용한 경량 그래프 기반 네트워크를 제안합니다. 모델은 8.48M 파라미터와 1.7 GFLOPS로 CPU에서 55 FPS, GPU에서 109 FPS를 달성합니다.',
     pose_intro_heading: '소개',
     pose_intro: '단일 손 자세 추정은 주로 심층 네트워크 아키텍처의 발전 덕분에 산업 응용을 포함한 여러 분야에서 큰 성공을 거두었습니다. 최근의 메시 재구성 알고리즘 [8, 10, 31, 41, 49, 54]은 일반적으로 입력 이미지에서 출력 메시까지 엔드투엔드로 학습됩니다. 이러한 방법은 성능을 높였지만, 더 많은 계산 자원과 높은 복잡도를 요구하는 경우가 많습니다. 기존 연구 [8, 53]는 CNN 기반 구조 정보가 3D 손 자세 추정의 특징 표현 학습에 중요하다는 것을 보여 주었습니다. 그러나 CNN 기반 방법은 운동학적 구조 정보를 정밀하게 모델링하는 데 약합니다. 운동학적 구조 정보를 더 잘 모델링하기 위해 여러 연구 [41, 49, 54, 71]는 트랜스포머의 어텐션 메커니즘으로 전체 특징 표현에 걸친 전역 시각 정보를 포착합니다. 이를 통해 모든 노드 간의 상호작용이 가능해져 노드 간 관계를 모델링할 수 있습니다. 그러나 셀프 어텐션은 노드 간 유사도 계산에 기반하며, 노드 간 인접 관계와 같은 그래프 구조 정보를 무시합니다 ...',
-    pose_read_paper: '논문을 읽어보세요. (출시 예정)',
+    pose_read_paper: 'RISS에서 학위논문 보기',
 
     // Labels, tags, image addresses and descriptions
     title_home: '호식니 – AI 엔지니어',
@@ -507,6 +509,7 @@ const i18n = {
     ct_intro_heading: 'សេចក្តីផ្តើម',
     ct_intro: 'ការថតកាំរស្មីអ៊ិច និង CT ត្រូវបានប្រើជាទូទៅនៅមន្ទីរពេទ្យ។ ការស្កេន CT មានគុណសម្បត្តិធំ ដោយបង្ហាញជាលិកាជា 3D ដែលដោះស្រាយបញ្ហារចនាសម្ព័ន្ធត្រួតគ្នាដែលឃើញក្នុងរូបភាព 2D ប្រកបដោយប្រសិទ្ធភាព។ ប៉ុន្តែការស្កេន CT មានតម្លៃថ្លៃ និងត្រូវការហេដ្ឋារចនាសម្ព័ន្ធច្រើន ដែលធ្វើឱ្យតំបន់ខ្វះធនធាន ឬខ្វះសេវាពិបាកទទួលបាន។ ផ្ទុយទៅវិញ កាំរស្មីអ៊ិចមានតម្លៃថោក និងមានទូលំទូលាយជាង ប៉ុន្តែផ្តល់ព័ត៌មានកាយវិភាគសាស្ត្រ 2D មានកម្រិត ដែលអាចរារាំងការធ្វើរោគវិនិច្ឆ័យឱ្យបានត្រឹមត្រូវ។ ក្នុងការងារនេះ យើងស្នើវិធីសាស្ត្រមួយដើម្បីបង្កើតរូបភាព CT 3D ឡើងវិញពីកាំរស្មីអ៊ិចតែមួយ ដែលថតពីប្លង់កែងគ្នា។ បញ្ហាប្រឈមចម្បងក្នុងការបង្កើតឡើងវិញ គឺភាពមិនច្បាស់លាស់ដែលមានក្នុងរូបភាពកាំរស្មីអ៊ិច ពោលគឺរូបភាព CT 3D ផ្សេងៗគ្នាជាច្រើនអាចបង្កើតរូបភាពកាំរស្មីអ៊ិច 2D ដូចគ្នា នៅពេលបញ្ចាំង។ វិធីសាស្ត្រដែលមានស្រាប់ ដូចជា X2CT-GAN[1] បានប្រើបណ្តាញ GAN សម្រាប់ការបង្កើត CT ឡើងវិញ ហើយបង្ហាញលទ្ធផលល្អ។ ប៉ុន្តែវាបាត់បង់ព័ត៌មានលម្អិតប្រេកង់ខ្ពស់ និងបង្កើតលទ្ធផលកម្រិតច្បាស់ទាប ដោយសារភាពលំបាកនៃបញ្ហារូបភាពបញ្ច្រាស។ ដើម្បីដោះស្រាយបញ្ហាទាំងនេះ និងបង្កើនប្រសិទ្ធភាពនៃការបង្កើតឡើងវិញ យើងណែនាំវិធីសាស្ត្រមួយហៅថា XR2CT៖ Reconstruction CT from a Single X-Ray view with GAN។ វិធីសាស្ត្ររបស់យើងប្រើរូបភាពកាំរស្មីអ៊ិចខាងមុខតែមួយជាទិន្នន័យបញ្ចូល ហើយប្រើ CT គំរូដំបូងដើម្បីណែនាំបណ្តាញ 3D។ បន្ទាប់មក រូបភាព CT 3D ដែលបានបង្កើតត្រូវបានបញ្ជូនទៅ discriminator ដើម្បីឱ្យលទ្ធផលកាន់តែស្មោះត្រង់នឹងការពិត។',
     ct_read_paper: 'អានឯកសារស្រាវជ្រាវខាងក្រោម។ (សូមចំណាំថា យើងប្រើតែរូបភាពកាំរស្មីអ៊ិចមួយប៉ុណ្ណោះជាទិន្នន័យបញ្ចូល)។',
+    ct_open_pdf: 'បើកឯកសារស្រាវជ្រាវ (PDF)',
     ct_paper_link: 'អានឯកសារស្រាវជ្រាវនៅលើ DBpia',
     pose_title: 'ការប៉ាន់ប្រមាណឥរិយាបថដៃ 3D',
     pose_subtitle: 'បណ្តាញក្រាហ្វស្រាល ដែលបង្កើនប្រសិទ្ធភាពទាំងភាពត្រឹមត្រូវ និងល្បឿន សម្រាប់ការប៉ាន់ប្រមាណឥរិយាបថដៃតែមួយក្នុង 3D។',
@@ -514,7 +517,7 @@ const i18n = {
     pose_summary: 'ការប៉ាន់ប្រមាណឥរិយាបថដៃបានទាក់ទាញការចាប់អារម្មណ៍យ៉ាងខ្លាំងនាពេលថ្មីៗនេះ ដែលនាំឱ្យមានការអភិវឌ្ឍវិធីសាស្ត្រផ្សេងៗ។ ទោះបីវិធីសាស្ត្រដែលមានស្រាប់មានគោលបំណងបង្កើនប្រសិទ្ធភាព ក៏ពួកវាតែងជួបបញ្ហាល្បឿន ដែលធ្វើឱ្យពិបាកដំណើរការក្នុងពេលវេលាជាក់ស្តែង។ យើងស្នើបណ្តាញក្រាហ្វស្រាលដែលប្រើ Chebyshev Graph Convolutions (ChebGConv)។ ម៉ូដែលរបស់យើងមានប៉ារ៉ាម៉ែត្រត្រឹមតែ 8.48M និងត្រូវការ 1.7 GFLOPS ដោយសម្រេចបាន 55 FPS លើ CPU និង 109 FPS លើ GPU។',
     pose_intro_heading: 'សេចក្តីផ្តើម',
     pose_intro: 'ការប៉ាន់ប្រមាណឥរិយាបថដៃតែមួយទទួលបានជោគជ័យយ៉ាងច្រើនក្នុងវិស័យផ្សេងៗ រួមទាំងកម្មវិធីឧស្សាហកម្ម ដោយសារភាពរីកចម្រើននៃស្ថាបត្យកម្មបណ្តាញស៊ីជម្រៅជាចម្បង។ ក្បួនដោះស្រាយបង្កើត mesh ឡើងវិញថ្មីៗ [8, 10, 31, 41, 49, 54] ជាធម្មតាត្រូវបានបង្ហាត់ពីចុងដល់ចុង ពីរូបភាពបញ្ចូលរហូតដល់ mesh លទ្ធផល។ ទោះបីវិធីសាស្ត្រទាំងនេះបានបង្កើនប្រសិទ្ធភាព ក៏ពួកវាតែងទាមទារធនធានគណនាច្រើន និងមានភាពស្មុគស្មាញខ្ពស់។ ការងារមុនៗ [8, 53] បានបង្ហាញថា ព័ត៌មានរចនាសម្ព័ន្ធផ្អែកលើ CNN មានសារៈសំខាន់សម្រាប់ការរៀនតំណាងលក្ខណៈ សម្រាប់ការប៉ាន់ប្រមាណឥរិយាបថដៃ 3D។ ប៉ុន្តែវិធីសាស្ត្រផ្អែកលើ CNN នៅខ្សោយក្នុងការធ្វើគំរូព័ត៌មានរចនាសម្ព័ន្ធចលនា (kinematic) ឱ្យបានច្បាស់លាស់។ ដើម្បីធ្វើគំរូព័ត៌មាននេះឱ្យកាន់តែល្អ ការសិក្សាមួយចំនួន [41, 49, 54, 71] ប្រើយន្តការ attention ក្នុង transformer ដើម្បីចាប់យកព័ត៌មានរូបភាពសកលលើតំណាងលក្ខណៈទាំងមូល។ វាអនុញ្ញាតឱ្យមានអន្តរកម្មរវាងថ្នាំង (node) ទាំងអស់ ហើយដូច្នេះធ្វើគំរូទំនាក់ទំនងរបស់ពួកវា។ ប៉ុន្តែ self-attention ផ្អែកលើការគណនាភាពស្រដៀងគ្នានៃថ្នាំង ហើយមិនអើពើព័ត៌មានរចនាសម្ព័ន្ធក្រាហ្វ ដូចជាទំនាក់ទំនងជាប់គ្នារវាងថ្នាំង ...',
-    pose_read_paper: 'អានឯកសារស្រាវជ្រាវខាងក្រោម។ (នឹងមកដល់ឆាប់ៗ)',
+    pose_read_paper: 'អាននិក្ខេបបទនៅលើ RISS',
     title_home: 'ហោ សៀកនី – វិស្វករ AI',
     title_va: 'ភ្នាក់ងារគ្រូបង្វឹកសំឡេង AI – ហោ សៀកនី',
     title_ct: 'ការបង្កើតរូបភាព CT ឡើងវិញពីកាំរស្មីអ៊ិច – ហោ សៀកនី',
